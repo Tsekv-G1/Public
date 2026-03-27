@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FB ADS GUIDE — ₮10,000-аас эхлэх гарын авлага</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #04040a;
+  --bg2: #07070f;
+  --card: #0b0b14;
+  --card2: #0e0e1a;
+  --border: rgba(255,255,255,0.055);
+  --border2: rgba(255,255,255,0.09);
+  --blue: #4a90ff;
+  --blue2: #1877f2;
+  --blue-glow: rgba(74,144,255,0.12);
+  --gold: #f0b429;
+  --gold-glow: rgba(240,180,41,0.12);
+  --green: #2ecc8a;
+  --green-glow: rgba(46,204,138,0.12);
+  --purple: #9d6ff7;
+  --purple-glow: rgba(157,111,247,0.12);
+  --red: #ff4d6d;
+  --red-glow: rgba(255,77,109,0.12);
+  --orange: #ff7c2a;
+  --orange-glow: rgba(255,124,42,0.12);
+  --cyan: #06d6f5;
+  --cyan-glow: rgba(6,214,245,0.12);
+  --pink: #f472b6;
+  --pink-glow: rgba(244,114,182,0.12);
+  --text: #ddddf0;
+  --text2: #9999b8;
+  --text3: #5a5a7a;
+  --white: #f0f0ff;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:400;overflow-x:hidden;line-height:1.7}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+#cur{position:fixed;width:8px;height:8px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .15s,height .15s}
+#cur2{position:fixed;width:32px;height:32px;border:1px solid rgba(74,144,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .1s}
+body:has(.card:hover) #cur{width:20px;height:20px}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px 100px}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.orb1{width:600px;height:400px;background:radial-gradient(ellipse,rgba(24,119,242,.1) 0%,transparent 70%);top:-10%;left:50%;transform:translateX(-50%)}
+.orb2{width:400px;height:400px;background:radial-gradient(ellipse,rgba(74,144,255,.06) 0%,transparent 70%);bottom:10%;left:-10%}
+.orb3{width:300px;height:300px;background:radial-gradient(ellipse,rgba(240,180,41,.05) 0%,transparent 70%);top:20%;right:-5%}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--blue);background:rgba(74,144,255,.07);border:1px solid rgba(74,144,255,.2);padding:7px 18px;border-radius:2px;margin-bottom:40px;opacity:0;animation:up .7s .1s forwards}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:blink 2s infinite}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,11vw,140px);line-height:.92;letter-spacing:.01em;opacity:0;animation:up .8s .25s forwards}
+.h1-line1{display:block;color:var(--white)}
+.h1-line2{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(74,144,255,.5)}
+.h1-line3{display:block;background:linear-gradient(135deg,var(--blue) 0%,var(--blue2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{max-width:540px;margin:28px auto 0;font-size:16px;color:var(--text2);line-height:1.75;opacity:0;animation:up .8s .4s forwards}
+.hero-desc strong{color:var(--text)}
+
+.stats-row{display:flex;gap:0;margin-top:48px;border:1px solid var(--border);border-radius:16px;overflow:hidden;opacity:0;animation:up .8s .6s forwards}
+.stat-cell{padding:20px 28px;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:36px}
+.stat-l{font-size:9px;color:var(--text3);letter-spacing:.15em;margin-top:4px}
+
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:up .8s 1s forwards}
+.hero-scroll span{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.3em;color:var(--text3)}
+.scroll-bar{width:1px;height:52px;background:linear-gradient(var(--blue),transparent);animation:scroll-anim 2.5s infinite}
+
+.nav{position:sticky;top:0;z-index:500;background:rgba(4,4,10,.88);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav-logo{padding:0 20px;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--blue);letter-spacing:.08em;flex-shrink:0;border-right:1px solid var(--border);white-space:nowrap}
+.nav-link{padding:16px 16px;font-size:11px;letter-spacing:.06em;color:var(--text3);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;font-weight:500;text-decoration:none}
+.nav-link:hover,.nav-link.on{color:var(--text);border-bottom-color:var(--blue)}
+.nav-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);margin-right:5px}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.sec{padding:80px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.sec.vis{opacity:1;transform:none}
+.sec-label{display:flex;align-items:center;gap:16px;margin-bottom:48px}
+.sec-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);letter-spacing:.1em}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);line-height:.95;letter-spacing:.02em}
+.sec-line{flex:1;height:1px;background:var(--border)}
+.sec-desc{font-size:15px;color:var(--text2);line-height:1.75;max-width:620px;margin-bottom:32px}
+.sec-desc strong{color:var(--text)}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;position:relative;overflow:hidden;transition:all .3s ease}
+.card::before{content:'';position:absolute;inset:0;border-radius:18px;opacity:0;transition:opacity .3s;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.03) 0%,transparent 60%)}
+.card:hover{transform:translateY(-4px);border-color:var(--border2)}
+.card:hover::before{opacity:1}
+.card-top-bar{position:absolute;top:0;left:0;right:0;height:2px;border-radius:18px 18px 0 0}
+.ctag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;padding:4px 12px;border-radius:3px;margin-bottom:14px;font-weight:500}
+.card h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.02em;margin-bottom:10px;line-height:1.1}
+.card p{font-size:14px;color:var(--text2);line-height:1.75}
+.card strong{color:var(--text);font-weight:600}
+
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:40px;position:relative;overflow:hidden;display:grid;align-items:start;gap:40px;margin-bottom:16px;transition:border-color .3s}
+.hero-card:hover{border-color:var(--border2)}
+.hero-card h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4vw,44px);line-height:1.05;margin-bottom:16px}
+.hero-card-2col{grid-template-columns:1.2fr 1fr}
+@media(max-width:800px){.hero-card-2col{grid-template-columns:1fr}.hero-card{padding:24px}}
+
+.blockquote{padding:40px 28px;text-align:center;background:linear-gradient(180deg,transparent,rgba(255,255,255,.012),transparent);margin:16px 0}
+.blockquote q{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,3vw,34px);letter-spacing:.02em;line-height:1.3;color:var(--white);display:block;max-width:800px;margin:0 auto;quotes:none}
+.blockquote cite{display:block;margin-top:12px;font-size:12px;color:var(--text3);font-style:normal;font-family:'JetBrains Mono',monospace;letter-spacing:.15em}
+
+.hl{margin-top:14px;padding:14px 18px;background:rgba(255,255,255,.025);border-radius:10px;border-left:2px solid;font-size:13px;line-height:1.65;color:var(--text2)}
+.hl strong{color:var(--text)}
+
+.tip-box{border-radius:14px;padding:18px 22px;margin:16px 0;display:flex;align-items:flex-start;gap:14px}
+.tip-icon{font-size:20px;flex-shrink:0;padding-top:2px}
+.tip-text{font-size:13px;color:var(--text2);line-height:1.65}
+.tip-text strong{color:var(--gold)}
+.tip-blue{background:linear-gradient(135deg,rgba(74,144,255,.06),rgba(74,144,255,.02));border:1px solid rgba(74,144,255,.18)}
+.tip-blue .tip-text strong{color:var(--blue)}
+.tip-gold{background:linear-gradient(135deg,rgba(240,180,41,.06),rgba(240,180,41,.02));border:1px solid rgba(240,180,41,.18)}
+.tip-red{background:linear-gradient(135deg,rgba(255,77,109,.06),rgba(255,77,109,.02));border:1px solid rgba(255,77,109,.18)}
+.tip-red .tip-text strong{color:var(--red)}
+.tip-green{background:linear-gradient(135deg,rgba(46,204,138,.06),rgba(46,204,138,.02));border:1px solid rgba(46,204,138,.18)}
+.tip-green .tip-text strong{color:var(--green)}
+
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,.025);border-radius:12px;border:1px solid var(--border);transition:border-color .2s}
+.step:hover{border-color:var(--border2)}
+.step-num{font-family:'JetBrains Mono',monospace;font-size:11px;flex-shrink:0;padding-top:2px;letter-spacing:.05em}
+.step h4{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px}
+.step p{font-size:13px;color:var(--text2);line-height:1.6}
+
+/* TYPE CARD */
+.type-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;position:relative;overflow:hidden;transition:all .3s;margin-bottom:12px}
+.type-card::before{content:'';position:absolute;inset:0;border-radius:18px;opacity:0;transition:opacity .3s;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.03) 0%,transparent 60%)}
+.type-card:hover{transform:translateY(-3px);border-color:var(--border2)}
+.type-card:hover::before{opacity:1}
+.type-header{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.type-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.type-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.1em}
+.type-name{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.02em;line-height:1}
+.type-subtitle{font-size:12px;color:var(--text3);margin-top:2px}
+.type-body{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.type-body{grid-template-columns:1fr}}
+.type-analogy{padding:16px;border-radius:12px;border:1px solid var(--border);margin-bottom:12px}
+.type-analogy-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;margin-bottom:8px}
+.type-use{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.type-use-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text2);line-height:1.5}
+.type-use-item::before{content:'→';color:var(--text3);flex-shrink:0}
+
+/* METRIC CARD v2 */
+.m-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:0;overflow:hidden;transition:all .3s;margin-bottom:12px}
+.m-card:hover{transform:translateY(-3px);border-color:var(--border2)}
+.m-top{padding:24px 24px 16px;position:relative}
+.m-top-bar{position:absolute;top:0;left:0;right:0;height:2px}
+.m-abbr{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:.02em;line-height:1}
+.m-fullname{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--text3);margin-top:4px}
+.m-question{font-size:15px;font-weight:600;color:var(--white);margin:14px 0 8px}
+.m-answer{font-size:14px;color:var(--text2);line-height:1.7}
+.m-analogy{padding:16px 24px;background:rgba(255,255,255,.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.m-analogy-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;margin-bottom:6px}
+.m-analogy-text{font-size:13px;color:var(--text2);line-height:1.6}
+.m-bottom{padding:16px 24px;display:flex;flex-direction:column;gap:8px}
+.m-formula{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);padding:8px 12px;background:rgba(0,0,0,.3);border-radius:6px;text-align:center}
+.m-benchmark{font-size:12px;line-height:1.6;padding:10px 14px;border-radius:8px}
+
+.bar-row{margin-bottom:14px}
+.bar-top{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px;color:var(--text2)}
+.bar-track{height:5px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;animation:barIn 1.4s .3s ease both}
+
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0}
+.tbl th{text-align:left;padding:12px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--text3)}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text2);font-size:13px;line-height:1.6}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(255,255,255,.018);color:var(--text)}
+.tbl-badge{padding:3px 10px;border-radius:4px;font-size:10px;font-weight:600;display:inline-block}
+
+.flow{display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.flow-step{padding:14px 20px;background:var(--card2);border:1px solid var(--border);border-radius:12px;text-align:center;min-width:110px;transition:all .2s}
+.flow-step:hover{border-color:var(--border2);transform:translateY(-2px)}
+.flow-step h4{font-size:12px;font-weight:600;margin-bottom:2px}
+.flow-step p{font-size:10px;color:var(--text3)}
+.flow-arrow{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text3);padding:0 6px}
+
+.combo{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:10px;transition:border-color .2s}
+.combo:hover{border-color:var(--border2)}
+.combo-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.combo-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:rgba(255,255,255,.06);line-height:1}
+.combo-title{font-size:15px;font-weight:600}
+.combo-desc{font-size:13px;color:var(--text2);line-height:1.7}
+.combo-flow{display:flex;align-items:center;gap:8px;margin-top:12px;padding:12px;background:rgba(255,255,255,.02);border-radius:10px;flex-wrap:wrap}
+.combo-tag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:4px 10px;border-radius:4px;font-weight:500}
+
+footer{padding:48px 24px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;max-width:1100px;margin:0 auto}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--blue);letter-spacing:.08em}
+.footer-copy{font-size:11px;color:var(--text3);font-family:'JetBrains Mono',monospace;letter-spacing:.1em}
+
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes scroll-anim{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes barIn{from{width:0}}
+
+@media(max-width:768px){
+  .stats-row{flex-wrap:wrap}
+  .stat-cell{flex:1;min-width:80px;padding:14px 16px}
+  .stat-n{font-size:28px}
+  .sec{padding:48px 0}
+  .hero{padding:40px 16px 80px}
+  .flow{flex-direction:column}
+  .flow-arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+  <div style="position:relative;z-index:5;width:100%;display:flex;flex-direction:column;align-items:center;">
+    <div class="hero-eyebrow">FB ADS GUIDE &nbsp;·&nbsp; PRODUCTDROP.MN</div>
+    <h1 class="hero-h1">
+      <span class="h1-line1">₮10,000-ААС</span>
+      <span class="h1-line2">РЕКЛАМ</span>
+      <span class="h1-line3">ЭХЛЭХ</span>
+    </h1>
+    <p class="hero-desc">Реклам гэдэг мөнгө шидэх явдал биш. <strong>Өгөгдөл худалдаж авах</strong> процесс. ₮10,000-аар ямар зураг ажилладаг, ямар хүмүүс сонирхдог гэдгийг мэдэж авна.</p>
+    <div class="stats-row">
+      <div class="stat-cell"><div class="stat-n" style="color:var(--blue)">6</div><div class="stat-l">OBJECTIVE</div></div>
+      <div class="stat-cell"><div class="stat-n" style="color:var(--gold)">4</div><div class="stat-l">ХОСЛУУЛАЛТ</div></div>
+      <div class="stat-cell"><div class="stat-n" style="color:var(--green)">8</div><div class="stat-l">ГОЛ МЕТРИК</div></div>
+      <div class="stat-cell"><div class="stat-n" style="color:var(--purple)">₮10K</div><div class="stat-l">ЭХЛЭХ БЮДЖЕТ</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>SCROLL</span><div class="scroll-bar"></div></div>
+</section>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-logo">FB ADS</div>
+  <a class="nav-link on" href="#mindset"><span class="nav-num">01</span>СЭТГЭЛГЭЭ</a>
+  <a class="nav-link" href="#types"><span class="nav-num">02</span>ТӨРЛҮҮД</a>
+  <a class="nav-link" href="#combos"><span class="nav-num">03</span>ХОСЛУУЛАЛТ</a>
+  <a class="nav-link" href="#metrics"><span class="nav-num">04</span>МЕТРИК</a>
+  <a class="nav-link" href="#budget"><span class="nav-num">05</span>БЮДЖЕТ</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ═══ 01 СЭТГЭЛГЭЭ ═══ -->
+<section class="sec" id="mindset">
+  <div class="sec-label">
+    <span class="sec-num">01 /</span>
+    <h2 class="sec-title" style="color:var(--blue)">РЕКЛАМЫН<br>СЭТГЭЛГЭЭ</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-desc">Эхний ₮10,000-аар чи мэдээлэл олж авна — хэн дардаг, юунд хариу өгдөг, ямар насны хүмүүс сонирхдог. <strong>Дараа нь ажилдаг зүйлд л мөнгө хийнэ.</strong></p>
+
+  <div class="hero-card hero-card-2col" style="border-color:rgba(74,144,255,.12)">
+    <div>
+      <div class="ctag" style="background:var(--blue-glow);color:var(--blue)">3 АЛХАМ</div>
+      <h2>Эхний 7 хоногийн<br><span style="color:var(--blue)">дараалал</span></h2>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--blue)">01</div><div><h4>1-3 хоног — Туршилт</h4><p>₮10,000-аар 2-3 зар тавь. Зорилго: өгөгдөл цуглуулах — аль зураг, аль текст, аль насны бүлэг илүү хариу үзүүлж байна.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--blue)">02</div><div><h4>4-5 хоног — Шүүлт</h4><p>Ажилладаг зарыг үлдээ, ажиллахгүйг зогсоо. Бюджетийг ялагч зар руу чиглүүл.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--blue)">03</div><div><h4>6-7 хоног — Масштаб</h4><p>Ажилладаг зүйлд мөнгө нэм. Ажиллахгүйд хийхгүй. Энэ л formula.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:rgba(255,255,255,.02);border-radius:16px;padding:24px;border:1px solid var(--border)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.15em;margin-bottom:14px">3 ТОМ АЛДАА</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="padding:12px;background:rgba(255,77,109,.04);border-radius:10px;border:1px solid rgba(255,77,109,.1)">
+            <div style="font-size:12px;color:var(--red);font-weight:600;margin-bottom:4px">❌ Шинжлэхгүйгээр бюджет ихэсгэх</div>
+            <p style="font-size:12px;color:var(--text3)">Аль нь ажилладагийг мэдэхгүйгээр мөнгө дүүргэх = мөнгө шатаах.</p>
+          </div>
+          <div style="padding:12px;background:rgba(255,77,109,.04);border-radius:10px;border:1px solid rgba(255,77,109,.1)">
+            <div style="font-size:12px;color:var(--red);font-weight:600;margin-bottom:4px">❌ Нэг л зар тавьж "ажиллахгүй" гэх</div>
+            <p style="font-size:12px;color:var(--text3)">2-3 зар зэрэг тавьж харьцуулахгүй бол юу ажилладгийг мэдэхгүй.</p>
+          </div>
+          <div style="padding:12px;background:rgba(255,77,109,.04);border-radius:10px;border:1px solid rgba(255,77,109,.1)">
+            <div style="font-size:12px;color:var(--red);font-weight:600;margin-bottom:4px">❌ Бүх хүнд чиглүүлэх</div>
+            <p style="font-size:12px;color:var(--text3)">Зорилтот бүлгийг нарийвчлах тусам зардал буурж, үр дүн нэмэгдэнэ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 ТӨРЛҮҮД ═══ -->
+<section class="sec" id="types">
+  <div class="sec-label">
+    <span class="sec-num">02 /</span>
+    <h2 class="sec-title" style="color:var(--gold)">CAMPAIGN<br>OBJECTIVE</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-desc">Meta Ads Manager-т шинэ campaign үүсгэхэд эхний сонголт нь <strong>"Choose a campaign objective"</strong> — яг энэ 6 сонголтоос нэгийг сонгоно. Буруу сонговол алгоритм буруу зүйлд optimize хийнэ.</p>
+
+  <!-- 1. AWARENESS -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--blue-glow);border:1px solid rgba(74,144,255,.2)">📢</div>
+      <div><div class="type-num">OBJECTIVE 01</div><div class="type-name" style="color:var(--blue)">AWARENESS</div><div class="type-subtitle">Танилцуулах — "Би байна шүү" гэж хэлэх</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Аль болох <strong>олон хүнд</strong> зарыг харуулна. Дарах эсэх нь хамаагүй — зүгээр л харуулна.</p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Зарыг хамгийн хямдаар олон хүнд хүргэх боломжтой газар байршуулна. Scroll хийж байгаа хүнд үзүүлнэ.</p>
+        <div class="type-analogy" style="background:rgba(74,144,255,.04);border-color:rgba(74,144,255,.12)">
+          <div class="type-analogy-label" style="color:var(--blue)">АМЬДРАЛЫН ЖИШЭЭ</div>
+          <p style="font-size:13px;color:var(--text2)">Гудамжинд зогсоод самбар барьж зогсож байгаатай адил. Хүмүүс харна — гэхдээ заавал зогсож үзэхгүй.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Шинэ брэнд, шинэ бүтээгдэхүүнийг танилцуулах</div>
+          <div class="type-use-item">Их хүнд нэрээ мэдүүлэх хэрэгтэй үед</div>
+          <div class="type-use-item">Video view тоог нэмэх</div>
+        </div>
+        <div class="hl" style="border-color:var(--blue);margin-top:12px">
+          <strong>₮10K-д юу авах:</strong> 2,000-5,000 хүнд хүрнэ. Click бага — гэхдээ нэрийг тань олон хүн мэдлээ.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. TRAFFIC -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--cyan-glow);border:1px solid rgba(6,214,245,.2)">🖱️</div>
+      <div><div class="type-num">OBJECTIVE 02</div><div class="type-name" style="color:var(--cyan)">TRAFFIC</div><div class="type-subtitle">Хөдөлгөөн чиглүүлэх — "Энд дараарай" гэж хэлэх</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Хүмүүсийг чиний вэбсайт, landing page, Telegram линк рүү <strong>дарж орохыг</strong> чиглүүлнэ.</p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Линк дарах дуртай хүмүүсийг олж, тэдэнд зарыг харуулна. Линк дардаг хүнийг олдог.</p>
+        <div class="type-analogy" style="background:rgba(6,214,245,.04);border-color:rgba(6,214,245,.12)">
+          <div class="type-analogy-label" style="color:var(--cyan)">АМЬДРАЛЫН ЖИШЭЭ</div>
+          <p style="font-size:13px;color:var(--text2)">Дэлгүүрийн хаалга нээж "орж ирээд харна уу" гэж урьж байгаатай адил. Орж ирвэл чи юм харуулж чадна.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Landing page-д хүн оруулах</div>
+          <div class="type-use-item">Telegram группд хүн нэмэх</div>
+          <div class="type-use-item">Блог пост, видеоны хуудас үзүүлэх</div>
+        </div>
+        <div class="hl" style="border-color:var(--cyan);margin-top:12px">
+          <strong>₮10K-д юу авах:</strong> 15-50 хүн чиний линк дарна. Тэд сайтад орж юу хийснийг pixel-ээр хянаж болно.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. ENGAGEMENT -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--green-glow);border:1px solid rgba(46,204,138,.2)">💬</div>
+      <div><div class="type-num">OBJECTIVE 03</div><div class="type-name" style="color:var(--green)">ENGAGEMENT</div><div class="type-subtitle">Идэвхжүүлэх — "Юу гэж бодож байна?" гэж асуух</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Like, comment, share, save — пост дээр хүмүүсийг <strong>идэвхтэй оролцуулна.</strong></p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Пост дээр like, comment тавьдаг дуртай хүмүүсийг олж, зарыг тэдэнд харуулна.</p>
+        <div class="type-analogy" style="background:rgba(46,204,138,.04);border-color:rgba(46,204,138,.12)">
+          <div class="type-analogy-label" style="color:var(--green)">АМЬДРАЛЫН ЖИШЭЭ</div>
+          <p style="font-size:13px;color:var(--text2)">Кафед суугаад хүмүүст "энэ кофе яаж байна?" гэж асууж байгаатай адил. Хүмүүс хариу өгнө — тэр нь бусад хүнд харагдана.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Reel, пост-ийн reach нэмэх</div>
+          <div class="type-use-item">Comment keyword trigger ажиллуулах</div>
+          <div class="type-use-item">Social proof (олон like, comment) бий болгох</div>
+        </div>
+        <div class="hl" style="border-color:var(--green);margin-top:12px">
+          <strong>ProductDrop-д хамгийн тохиромжтой.</strong> Reel boost → comment → DM automation → Pro subscriber.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. LEADS -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--purple-glow);border:1px solid rgba(157,111,247,.2)">📋</div>
+      <div><div class="type-num">OBJECTIVE 04</div><div class="type-name" style="color:var(--purple)">LEADS</div><div class="type-subtitle">Мэдээлэл цуглуулах — "Нэр, утсаа үлдээгээрэй" гэж хэлэх</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Нэр, утас, и-мэйл зэрэг мэдээллийг <strong>Facebook дотроо</strong> цуглуулна. Хүн гарах хэрэггүй.</p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Маягт бөглөдөг дуртай хүмүүсийг олно. Facebook дотор маягт гарч ирэх учраас бөглөх хувь өндөр.</p>
+        <div class="type-analogy" style="background:rgba(157,111,247,.04);border-color:rgba(157,111,247,.12)">
+          <div class="type-analogy-label" style="color:var(--purple)">АМЬДРАЛЫН ЖИШЭЭ</div>
+          <p style="font-size:13px;color:var(--text2)">Арга хэмжээнд ирсэн хүнээс "нэрээ бичээд зурагт сугалаанд оролцоорой" гэж байгаатай адил. Тэд нэрээ бичихэд чи холбоо барих мэдээлэл авна.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Bootcamp, вебинар бүртгэл авах</div>
+          <div class="type-use-item">Сонирхсон хүмүүсийн утас авах</div>
+          <div class="type-use-item">Waitlist цуглуулах</div>
+        </div>
+        <div class="hl" style="border-color:var(--purple);margin-top:12px">
+          <strong>₮10K-д юу авах:</strong> 5-15 хүний мэдээлэл. Google Form-оос хялбар — хүн Facebook-ээс гарах хэрэггүй.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. APP PROMOTION -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--pink-glow);border:1px solid rgba(244,114,182,.2)">📱</div>
+      <div><div class="type-num">OBJECTIVE 05</div><div class="type-name" style="color:var(--pink)">APP PROMOTION</div><div class="type-subtitle">Апп суулгуулах — "Татаж аваарай" гэж хэлэх</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Хүмүүсийг App Store эсвэл Google Play руу чиглүүлж, аппликейшн <strong>суулгуулна.</strong></p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Апп суулгадаг дуртай хүмүүсийг олно. "Install" товч шууд зар дээр байна.</p>
+        <div class="type-analogy" style="background:rgba(244,114,182,.04);border-color:rgba(244,114,182,.12)">
+          <div class="type-analogy-label" style="color:var(--pink)">ЧАМД ХЭРЭГТЭЙ ЮУ?</div>
+          <p style="font-size:13px;color:var(--text2)"><strong>Одоохондоо хэрэггүй.</strong> Энэ нь зөвхөн апп бүтээгдэхүүнтэй бизнест зориулагдсан. ProductDrop-д апп байхгүй учраас энийг алгасаж болно.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Апп суулгалтын тоо нэмэх</div>
+          <div class="type-use-item">Апп дотор тодорхой үйлдэл хийлгэх</div>
+          <div class="type-use-item">Аппын хэрэглэгчдийг дахин идэвхжүүлэх</div>
+        </div>
+        <div class="hl" style="border-color:var(--pink);margin-top:12px">
+          <strong>ProductDrop-д:</strong> Хэрэглэхгүй. Апп бүтээгдэхүүн гарах хүртэл энэ objective-ийг мартаж болно.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. SALES -->
+  <div class="type-card">
+    <div class="type-header">
+      <div class="type-icon" style="background:var(--orange-glow);border:1px solid rgba(255,124,42,.2)">🛒</div>
+      <div><div class="type-num">OBJECTIVE 06</div><div class="type-name" style="color:var(--orange)">SALES</div><div class="type-subtitle">Худалдан авалт — "Яг одоо авааарай" гэж хэлэх</div></div>
+    </div>
+    <div class="type-body">
+      <div>
+        <p style="margin-bottom:12px"><strong>Юу хийдэг:</strong> Вэбсайт дээр <strong>худалдан авалт хийлгэх,</strong> сагсанд нэмүүлэх, бүртгүүлүүлэх зэрэг тодорхой үйлдэл хийлгэнэ.</p>
+        <p style="margin-bottom:12px"><strong>Алгоритм юу хийдэг:</strong> Meta Pixel суулгасан байх шаардлагатай. Pixel-ийн өгөгдлөөр худалдан авалт хийх магадлал өндөр хүнийг олно.</p>
+        <div class="type-analogy" style="background:rgba(255,124,42,.04);border-color:rgba(255,124,42,.12)">
+          <div class="type-analogy-label" style="color:var(--orange)">АМЬДРАЛЫН ЖИШЭЭ</div>
+          <p style="font-size:13px;color:var(--text2)">Дэлгүүрт орж ирсэн хүнд "энийг аваарай, одоо хямдарсан" гэж борлуулагч хэлж байгаатай адил. Аль хэдийн сонирхсон хүнд яг тохирсон саналыг санал болгоно.</p>
+        </div>
+      </div>
+      <div>
+        <div class="type-use">
+          <div class="type-use-item">Онлайн дэлгүүрээс борлуулалт хийх</div>
+          <div class="type-use-item">Landing page-д бүртгэл хийлгэх</div>
+          <div class="type-use-item">Вэбсайтад орсон гэхдээ аваагүй хүнд дахин зар харуулах (retargeting)</div>
+        </div>
+        <div class="hl" style="border-color:var(--orange);margin-top:12px">
+          <strong>Анхааруулга:</strong> Pixel-д хангалттай өгөгдөл (50+ conversion) цугласны ДАРАА л сайн ажилладаг. Эхлэхдээ Traffic эсвэл Engagement ашиглах нь зөв.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box tip-gold">
+    <span class="tip-icon">🎯</span>
+    <span class="tip-text"><strong>ProductDrop-д яг одоо хэрэгтэй 2 objective:</strong> (1) <strong>Engagement</strong> — reel boost хийж comment авах, DM automation ажиллуулах. (2) <strong>Traffic</strong> — landing page руу хүн чиглүүлэх. Бусад нь дараа дараагийн шат.</span>
+  </div>
+</section>
+
+<!-- ═══ 03 ХОСЛУУЛАЛТ ═══ -->
+<section class="sec" id="combos">
+  <div class="sec-label">
+    <span class="sec-num">03 /</span>
+    <h2 class="sec-title" style="color:var(--purple)">ХОСЛУУЛАЛТ<br>& FUNNEL</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-desc">Нэг төрлийн зар ганцаараа бүрэн ажиллахгүй. Хэд хэдэн objective-ийг <strong>дарааллаар хослуулахад</strong> хамгийн их үр дүн гарна.</p>
+
+  <div class="card" style="margin-bottom:16px;text-align:center">
+    <div class="card-top-bar" style="background:linear-gradient(90deg,var(--blue),var(--cyan),var(--green),var(--orange))"></div>
+    <h3 style="color:var(--white);margin-bottom:20px;font-size:24px">РЕКЛАМЫН FUNNEL</h3>
+    <div class="flow">
+      <div class="flow-step" style="border-color:rgba(74,144,255,.2)"><h4 style="color:var(--blue)">Awareness</h4><p>Мэдэхгүй хүн</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:rgba(6,214,245,.2)"><h4 style="color:var(--cyan)">Traffic</h4><p>Сонирхсон хүн</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:rgba(46,204,138,.2)"><h4 style="color:var(--green)">Engagement</h4><p>Идэвхтэй хүн</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:rgba(255,124,42,.2)"><h4 style="color:var(--orange)">Sales</h4><p>Худалдан авагч</p></div>
+    </div>
+    <p style="font-size:13px;color:var(--text3);margin-top:16px">Алхам бүрд хүний тоо цөөрч, чанар нэмэгдэнэ. Энэ бол жам ёсны процесс.</p>
+  </div>
+
+  <div class="combo">
+    <div class="combo-head"><div class="combo-num">01</div><div class="combo-title" style="color:var(--green)">Одоо хийх хослол — Reel boost + DM</div></div>
+    <div class="combo-desc"><strong>Бюджет: ₮20-30K/7 хоног.</strong> Шилдэг organic reel-ийг Engagement objective-ээр boost хийж, comment дээр DM автомат ажиллуулна.</div>
+    <div class="combo-flow">
+      <span class="combo-tag" style="background:var(--green-glow);color:var(--green)">Engagement boost</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--purple-glow);color:var(--purple)">Comment keyword</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--orange-glow);color:var(--orange)">DM → Sale</span>
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-head"><div class="combo-num">02</div><div class="combo-title" style="color:var(--cyan)">Таниулах + Чиглүүлэх</div></div>
+    <div class="combo-desc"><strong>Бюджет: ₮30-50K/7 хоног.</strong> Awareness-ээр олон хүнд харуулж, Traffic-ээр сонирхсон хүнийг TG группд оруулна.</div>
+    <div class="combo-flow">
+      <span class="combo-tag" style="background:var(--blue-glow);color:var(--blue)">Awareness</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--cyan-glow);color:var(--cyan)">Traffic (TG линк)</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--green-glow);color:var(--green)">TG группд нэгдэнэ</span>
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-head"><div class="combo-num">03</div><div class="combo-title" style="color:var(--orange)">Борлуулалтын хослол — Traffic + Sales retargeting</div></div>
+    <div class="combo-desc"><strong>Бюджет: ₮50-100K/7 хоног.</strong> Traffic-ээр landing page руу оруулж, ороод гараад явсан хүмүүст Sales objective-ээр retargeting зар харуулна.</div>
+    <div class="combo-flow">
+      <span class="combo-tag" style="background:var(--cyan-glow);color:var(--cyan)">Traffic (Landing)</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--orange-glow);color:var(--orange)">Sales retargeting</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--gold-glow);color:var(--gold)">Худалдан авалт</span>
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-head"><div class="combo-num">04</div><div class="combo-title" style="color:var(--purple)">Leads хослол — Бүртгэл цуглуулах</div></div>
+    <div class="combo-desc"><strong>Бюджет: ₮30-50K/7 хоног.</strong> Awareness зараар олонд хүрч, Leads objective-ээр bootcamp/вебинар бүртгэлийн маягт бөглүүлнэ.</div>
+    <div class="combo-flow">
+      <span class="combo-tag" style="background:var(--blue-glow);color:var(--blue)">Awareness</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--purple-glow);color:var(--purple)">Leads маягт</span>
+      <span style="color:var(--text3)">→</span>
+      <span class="combo-tag" style="background:var(--green-glow);color:var(--green)">DM → Bootcamp</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 МЕТРИК ═══ -->
+<section class="sec" id="metrics">
+  <div class="sec-label">
+    <span class="sec-num">04 /</span>
+    <h2 class="sec-title" style="color:var(--green)">ГОЛ<br>МЕТРИКҮҮД</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-desc">Зар ажиллаж байна уу гэдгийг <strong>мэдрэмжээр биш, тоогоор</strong> шалгана. Метрик бүр өөр асуултад хариу өгдөг — тэр асуултыг нь ойлговол метрикийг ойлгоно.</p>
+
+  <!-- CPM -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--blue)"></div>
+      <div class="m-abbr" style="color:var(--blue)">CPM</div>
+      <div class="m-fullname">COST PER MILLE (1,000 УДАА ХАРУУЛАХ ҮНЭ)</div>
+      <div class="m-question">Асуулт: "1,000 хүнд хүрэхэд хэдэн төгрөг зарцуулагдаж байна?"</div>
+      <div class="m-answer">Энэ нь чиний зар хэр <strong>хямдаар олон хүнд хүрч</strong> байгааг хэмждэг. CPM өндөр бол → зарыг үзүүлэх нь үнэтэй байна. CPM бага бол → хямдаар олон хүнд хүрч байна.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--blue)">ЖИШЭЭ</div><div class="m-analogy-text">Гудамжны самбарын түрээсийн үнэ гэж бод. Олон хүн зорчдог гудамжинд самбар тавих үнэ өндөр (CPM өндөр). Бага хүн зорчдог газарт хямд (CPM бага). Гэхдээ олон хүнтэй гудамж = илүү олон хүн харна.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Нийт зардал ÷ Нийт харуулсан тоо × 1,000</div>
+      <div class="m-benchmark" style="background:rgba(74,144,255,.06);border:1px solid rgba(74,144,255,.12)"><strong style="color:var(--blue)">Монголд:</strong> ₮1,000-3,000 — сайн. ₮5,000+ — зорилтот бүлэг хэт нарийн эсвэл зар чанаргүй.</div>
+    </div>
+  </div>
+
+  <!-- CTR -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--cyan)"></div>
+      <div class="m-abbr" style="color:var(--cyan)">CTR</div>
+      <div class="m-fullname">CLICK-THROUGH RATE (ДАРАХ ХУВЬ)</div>
+      <div class="m-question">Асуулт: "Зарыг харсан хүмүүсийн хэдэн хувь нь дарсан бэ?"</div>
+      <div class="m-answer">Энэ нь чиний зар хэр <strong>сонирхол татаж</strong> байгааг хэмждэг. CTR өндөр бол → зар сонирхолтой, хүмүүс дарж байна. CTR бага бол → зураг эсвэл текст тэдний анхаарлыг татахгүй байна.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--cyan)">ЖИШЭЭ</div><div class="m-analogy-text">Дэлгүүрийн хаалган дээрх зурагтай самбар гэж бод. 100 хүн өнгөрвөл тэдний хэд нь зогсоод хаалга нээж ордог вэ? 5 хүн орвол = CTR 5%. Зураг нь сонирхолтой байх тусам олон хүн орно.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Дарсан тоо ÷ Харуулсан тоо × 100</div>
+      <div class="m-benchmark" style="background:rgba(6,214,245,.06);border:1px solid rgba(6,214,245,.12)"><strong style="color:var(--cyan)">Сайн CTR:</strong> 2%+ — сайн. 1%-аас доош бол → зураг эсвэл текст солих хэрэгтэй. Hook ажиллахгүй байна.</div>
+    </div>
+  </div>
+
+  <!-- CPC -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--green)"></div>
+      <div class="m-abbr" style="color:var(--green)">CPC</div>
+      <div class="m-fullname">COST PER CLICK (НЭГ ДАРАХАД ТӨЛӨХ ҮНЭ)</div>
+      <div class="m-question">Асуулт: "Нэг хүн дарахад хэдэн төгрөг зарцуулагдаж байна?"</div>
+      <div class="m-answer">Энэ нь чиний сайт руу <strong>нэг хүн оруулахад хэр үнэтэй</strong> болж байгааг хэмждэг. CPC бага бол → хямдаар олон хүн оруулж байна. CPC өндөр бол → хүн оруулах нь үнэтэй болж байна.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--green)">ЖИШЭЭ</div><div class="m-analogy-text">Дэлгүүрт нэг хэрэглэгч оруулахад хэдэн төгрөг зарцуулж байна гэж бод. ₮200-оор нэг хүн орж ирвэл хямд. ₮2,000-аар орж ирвэл — тэр хүн заавал юм авах биш шүү дээ — мөнгө их зарцуулж байна.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Нийт зардал ÷ Нийт дарсан тоо</div>
+      <div class="m-benchmark" style="background:rgba(46,204,138,.06);border:1px solid rgba(46,204,138,.12)"><strong style="color:var(--green)">Монголд:</strong> ₮200-500 — сайн. ₮1,000+ бол → CTR бага эсвэл зорилтот бүлэг буруу байж магадгүй.</div>
+    </div>
+  </div>
+
+  <!-- CPA -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--orange)"></div>
+      <div class="m-abbr" style="color:var(--orange)">CPA</div>
+      <div class="m-fullname">COST PER ACTION (НЭГ ҮЙЛДЛИЙН ҮНЭ)</div>
+      <div class="m-question">Асуулт: "Нэг хүнийг бүртгүүлэх / худалдан авалт хийлгэхэд хэдэн төгрөг зарцуулагдсан?"</div>
+      <div class="m-answer">Энэ нь хамгийн <strong>чухал метрик</strong> — чиний зар эцсийн үр дүнд хүрч байна уу гэдгийг хэмждэг. CPA чиний бүтээгдэхүүний ашгаас бага бол = ашигтай. Ихэссэн бол = алдагдалтай.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--orange)">ЖИШЭЭ</div><div class="m-analogy-text">Нэг харилцагч олоход хэдэн төгрөг зарцуулсан гэж бод. ₮59,900-ийн Pro subscription зарж байгаа бол, нэг subscriber олоход ₮15,000 зарцуулвал = ₮44,900 ашиг. Гэхдээ ₮70,000 зарцуулвал = алдагдал.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Нийт зардал ÷ Үйлдлийн тоо (бүртгэл, худалдан авалт гэх мэт)</div>
+      <div class="m-benchmark" style="background:rgba(255,124,42,.06);border:1px solid rgba(255,124,42,.12)"><strong style="color:var(--orange)">Дүрэм:</strong> CPA < бүтээгдэхүүний ашиг байх ёстой. ₮59,900 бүтээгдэхүүнд CPA ₮20,000-аас бага бол = зүгээр.</div>
+    </div>
+  </div>
+
+  <!-- ROAS -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--gold)"></div>
+      <div class="m-abbr" style="color:var(--gold)">ROAS</div>
+      <div class="m-fullname">RETURN ON AD SPEND (РЕКЛАМЫН ӨГӨӨЖ)</div>
+      <div class="m-question">Асуулт: "Рекламд зарцуулсан 1 төгрөг бүрт хэдэн төгрөг буцаж ирж байна?"</div>
+      <div class="m-answer">Энэ нь зар <strong>ашигтай эсэхийг</strong> шууд хэмждэг. ROAS 3× бол = 1 төгрөг зарцуулахад 3 төгрөг буцаж ирж байна. 1×-аас доош бол = рекламд зарцуулсан мөнгө буцаж ирэхгүй байна.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--gold)">ЖИШЭЭ</div><div class="m-analogy-text">₮10,000 рекламд зарцуулаад ₮30,000-ийн борлуулалт олвол → ROAS = 3×. Энэ нь яг л "1 төгрөг хөрөнгө оруулаад 3 төгрөг буцааж авсан" гэсэн үг. ₮10,000-д ₮8,000 л олвол → ROAS = 0.8× → алдагдалтай.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Нийт борлуулалт ÷ Нийт рекламын зардал</div>
+      <div class="m-benchmark" style="background:rgba(240,180,41,.06);border:1px solid rgba(240,180,41,.12)"><strong style="color:var(--gold)">Зорилго:</strong> 3× дээш = сайн. 2× = зүгээр. 1×-аас доош = алдагдалтай, зар эсвэл offer засах хэрэгтэй.</div>
+    </div>
+  </div>
+
+  <!-- FREQUENCY -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--purple)"></div>
+      <div class="m-abbr" style="color:var(--purple)">FREQ</div>
+      <div class="m-fullname">FREQUENCY (ДАВТАМЖ)</div>
+      <div class="m-question">Асуулт: "Нэг хүн миний зарыг дунджаар хэдэн удаа харсан бэ?"</div>
+      <div class="m-answer">Энэ нь хүмүүс чиний зарыг хэт <strong>олон удаа харж залхаж байна уу</strong> гэдгийг хэмждэг. Бага бол анхны мэдрэмж шинэ. Хэт их бол → хүмүүс алгасч эхэлнэ, зарим нь "Hide ad" дарна.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--purple)">ЖИШЭЭ</div><div class="m-analogy-text">Нэг реклам ТВ-д 2-3 удаа гарвал — "за, сонирхолтой юм байна" гэнэ. 10 удаа гарвал → "аа, дахиад яриад байна, залхлаа." Яг ижилхэн зүйл Facebook дээр ч болдог.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Нийт харуулсан тоо ÷ Хүрсэн хүний тоо</div>
+      <div class="m-benchmark" style="background:rgba(157,111,247,.06);border:1px solid rgba(157,111,247,.12)"><strong style="color:var(--purple)">Зохимжтой:</strong> 1.5-3.0 — хэвийн. 4+ бол → хүмүүс залхаж байна. Зар солих эсвэл зорилтот бүлгийг өргөсгөх хэрэгтэй.</div>
+    </div>
+  </div>
+
+  <!-- CVR -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:var(--red)"></div>
+      <div class="m-abbr" style="color:var(--red)">CVR</div>
+      <div class="m-fullname">CONVERSION RATE (ХӨРВҮҮЛЭЛТИЙН ХУВЬ)</div>
+      <div class="m-question">Асуулт: "Линк дарсан хүмүүсийн хэдэн хувь нь яг хүссэн зүйлийг хийсэн бэ?"</div>
+      <div class="m-answer">Энэ нь чиний <strong>landing page, offer хэр сайн ажиллаж</strong> байгааг хэмждэг. Click олон гэхдээ CVR бага бол → асуудал зарт биш, хуудсанд эсвэл offer-т байна гэсэн үг.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--red)">ЖИШЭЭ</div><div class="m-analogy-text">Дэлгүүрт 100 хүн орж ирвэл тэдний хэд нь юм авч гарна вэ? 5 хүн авч гарвал = CVR 5%. Хүн олон орж ирэхдээ ирж байна гэхдээ хэн ч юм авахгүй бол → дэлгүүрийн тавил, үнэ, борлуулагчид асуудалтай.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Үйлдэл хийсэн тоо ÷ Дарсан тоо × 100</div>
+      <div class="m-benchmark" style="background:rgba(255,77,109,.06);border:1px solid rgba(255,77,109,.12)"><strong style="color:var(--red)">Сайн CVR:</strong> 3-10%. 1%-аас доош бол → landing page-ийн текст, дизайн, эсвэл offer-д асуудалтай.</div>
+    </div>
+  </div>
+
+  <!-- REACH -->
+  <div class="m-card">
+    <div class="m-top"><div class="m-top-bar" style="background:linear-gradient(90deg,var(--blue),var(--cyan))"></div>
+      <div class="m-abbr" style="color:var(--blue)">REACH</div>
+      <div class="m-fullname">REACH & IMPRESSIONS (ХҮРЭЛТ & ХАРУУЛАЛТ)</div>
+      <div class="m-question">Асуулт: "Хэдэн хүн харсан бэ? Нийт хэдэн удаа харуулсан бэ?"</div>
+      <div class="m-answer">Энэ хоёр нь хамт ярилцдаг ч <strong>огт өөр зүйл хэмждэг.</strong><br><strong>Reach</strong> = хэдэн <em>өөр хүн</em> зарыг харсан бэ. Нэг хүнийг нэг л удаа тоолно.<br><strong>Impressions</strong> = зарыг нийт хэдэн <em>удаа</em> харуулсан бэ. Нэг хүн 3 удаа харвал = 3 impression.</div>
+    </div>
+    <div class="m-analogy"><div class="m-analogy-label" style="color:var(--blue)">ЖИШЭЭ</div><div class="m-analogy-text">Гудамжны самбарыг 1,000 хүн харсан (Reach = 1,000). Тэдний зарим нь өдөрт 3 удаа өнгөрч 3 удаа харсан. Тиймээс нийт харуулалт = 3,000 (Impressions). Reach = хэдэн ХҮН. Impressions = хэдэн УДАА.</div></div>
+    <div class="m-bottom">
+      <div class="m-formula">Reach = өвөрмөц хүний тоо &nbsp;|&nbsp; Impressions = нийт харуулсан тоо</div>
+      <div class="m-benchmark" style="background:rgba(74,144,255,.06);border:1px solid rgba(74,144,255,.12)"><strong style="color:var(--blue)">Ялгаа чухал:</strong> Reach 1,000 + Impressions 3,000 = нэг хүн дунджаар 3 удаа харсан (Frequency = 3).</div>
+    </div>
+  </div>
+
+  <!-- ШАЛГАХ ДАРААЛАЛ -->
+  <div class="card" style="margin-top:16px">
+    <div class="card-top-bar" style="background:linear-gradient(90deg,var(--blue),var(--green),var(--gold),var(--red))"></div>
+    <h3 style="color:var(--white);margin-bottom:16px;font-size:24px">ЗАР ТАВЬСНЫ ДАРАА — ЯАГААД АЖИЛЛАХГҮЙ БАЙНА?</h3>
+    <p style="margin-bottom:16px">Зар ажиллахгүй бол доорх дарааллаар шалга. <strong>Аль алхамд асуудал байна, тэнд засвар хий.</strong></p>
+    <div class="steps">
+      <div class="step"><div class="step-num" style="color:var(--blue)">①</div><div><h4>CPM хэт өндөр юу?</h4><p>Тийм бол → зорилтот бүлэг хэт нарийн. Нас, байршил, сонирхлыг өргөж тохируул.</p></div></div>
+      <div class="step"><div class="step-num" style="color:var(--cyan)">②</div><div><h4>CTR 2%-аас доош юу?</h4><p>Тийм бол → зар сонирхол татахгүй байна. Зураг, видео эсвэл текст (hook) солих хэрэгтэй.</p></div></div>
+      <div class="step"><div class="step-num" style="color:var(--green)">③</div><div><h4>CPC ₮500-аас дээш юу?</h4><p>Тийм бол → CTR бага эсвэл зорилтот бүлэг чанаргүй. Hook сайжруулж, audience тохируул.</p></div></div>
+      <div class="step"><div class="step-num" style="color:var(--orange)">④</div><div><h4>Click олон гэхдээ бүртгэл бага юу?</h4><p>Тийм бол → CVR бага. Асуудал зарт биш — landing page-д эсвэл offer-т байна. Хуудсаа засах хэрэгтэй.</p></div></div>
+      <div class="step"><div class="step-num" style="color:var(--gold)">⑤</div><div><h4>ROAS 3×-аас доош юу?</h4><p>Тийм бол → CPA хэт өндөр эсвэл бүтээгдэхүүний үнэ бага. Offer эсвэл pricing засах хэрэгтэй.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 БЮДЖЕТ ═══ -->
+<section class="sec" id="budget">
+  <div class="sec-label">
+    <span class="sec-num">05 /</span>
+    <h2 class="sec-title" style="color:var(--gold)">БЮДЖЕТИЙН<br>СТРАТЕГИ</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-desc">Их мөнгө хэрэггүй. <strong>Ухаалаг зарцуулах</strong> чадвар хэрэгтэй.</p>
+
+  <div class="hero-card hero-card-2col" style="border-color:rgba(240,180,41,.12)">
+    <div>
+      <div class="ctag" style="background:var(--gold-glow);color:var(--gold)">3 ШАТЛАЛ</div>
+      <h2>Жижиг эхэлж,<br><span style="color:var(--gold)">томыг бүтээ</span></h2>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--green)">₮30-50K</div><div><h4>Туршилт</h4><p>2-3 зар тус бүр ₮10-15K. Ажиллах зараа олох. 3-5 хоног.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--gold)">₮100-200K</div><div><h4>Өсөлт</h4><p>Ялагч зарыг масштаблах. Retargeting нэмэх. 7-14 хоног.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--orange)">₮300K+</div><div><h4>Масштаб</h4><p>Бүтэн funnel ажиллуулах. Lookalike audience нэмэх.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:rgba(255,255,255,.02);border-radius:16px;padding:24px;border:1px solid var(--border)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.15em;margin-bottom:16px">₮100K ХУВААРИЛАЛТ</div>
+        <div class="bar-row"><div class="bar-top"><span>Traffic зар</span><span style="color:var(--cyan)">40% — ₮40K</span></div><div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--cyan)"></div></div></div>
+        <div class="bar-row"><div class="bar-top"><span>Engagement boost</span><span style="color:var(--green)">25% — ₮25K</span></div><div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--green)"></div></div></div>
+        <div class="bar-row"><div class="bar-top"><span>Sales retargeting</span><span style="color:var(--orange)">20% — ₮20K</span></div><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--orange)"></div></div></div>
+        <div class="bar-row"><div class="bar-top"><span>Шинэ зар туршилт</span><span style="color:var(--gold)">15% — ₮15K</span></div><div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--gold)"></div></div></div>
+      </div>
+      <div class="tip-box tip-gold" style="margin-top:16px">
+        <span class="tip-icon">⚡</span>
+        <span class="tip-text"><strong>Алтан дүрэм:</strong> Бюджетийн 15%-ийг <em>үргэлж</em> шинэ зар туршихад зарцуулах. Хуучин зар хэзээ нэгэн цагт "ядарна" — шинэ зар бэлэн байх ёстой.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box tip-red">
+    <span class="tip-icon">🚫</span>
+    <span class="tip-text"><strong>Хийж болохгүй зүйл:</strong> Бүх бюджетийг нэг зарт шидэх. Шинжлэхгүйгээр бюджет ихэсгэх. 48 цагийн дараа CTR 1%-аас доош байвал зарыг зогсоо.</span>
+  </div>
+</section>
+
+</div>
+
+<div class="blockquote">
+  <q>Бараа сонгох, supplier олох, ad copy бичих — бүгдийг нэг газраас авбал хурдан</q>
+  <cite>— PRODUCTDROP.MN</cite>
+</div>
+
+<footer>
+  <div class="footer-logo">FB ADS GUIDE</div>
+  <div style="display:flex;flex-direction:column;gap:4px;text-align:right">
+    <div class="footer-copy">PRODUCTDROP.MN — РЕКЛАМЫН ГАРЫН АВЛАГА</div>
+    <div class="footer-copy" style="opacity:.5">v2.0 — 2026</div>
+  </div>
+</footer>
+
+<script>
+const c=document.getElementById('cur'),c2=document.getElementById('cur2');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c.style.left=mx+'px';c.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(loop)})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.07});
+document.querySelectorAll('.sec').forEach(s=>io.observe(s));
+const navLinks=document.querySelectorAll('.nav-link');
+const navIds=['mindset','types','combos','metrics','budget'];
+window.addEventListener('scroll',()=>{let cur=0;navIds.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=130)cur=i});navLinks.forEach((l,i)=>l.classList.toggle('on',i===cur))},{passive:true});
+</script>
+</body>
+</html>
