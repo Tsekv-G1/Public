@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бизнес план каталог | ProductDrop.MN</title>
+<meta name="description" content="Монголд ороогүй бараа — supplier, margin, контент бүгд бэлэн.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06060a;--s:#0d0d12;--s2:#13131a;--b:#1c1c26;--b2:#28283a;--t:#efefef;--m:#5a5a72;--m2:#3a3a50;--a:#c8ff00;--acd:rgba(200,255,0,.08);--acg:rgba(200,255,0,.15);--r:#ff4444;--orange:#ff9632;--purple:#a78bfa;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:'DM Mono',monospace;font-size:13px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.5}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;padding:0 max(16px,4vw);display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,10,.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo svg{width:22px;height:22px;flex-shrink:0}
+.logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:13px;letter-spacing:-.3px;color:var(--t)}
+.logo-text span{color:var(--a)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-sub-btn{background:var(--a);color:#000;font-family:'DM Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 14px;border:none;cursor:pointer;transition:background .2s}
+.nav-sub-btn:hover{background:#b5e800}
+.live-dot{width:5px;height:5px;background:var(--a);border-radius:50%;animation:bk 2s infinite;flex-shrink:0}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* HERO CTA */
+.hero-cta-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.hero-btn-main{background:var(--a);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:13px 26px;border:none;cursor:pointer;transition:background .2s}
+.hero-btn-main:hover{background:#b5e800}
+.hero-btn-sub{background:transparent;color:var(--m);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:13px 20px;border:1px solid var(--b2);cursor:pointer;transition:all .2s}
+.hero-btn-sub:hover{border-color:var(--m);color:var(--t)}
+
+/* WHAT YOU GET */
+.whats-in{padding:0 max(16px,5vw) 0;border-bottom:1px solid var(--b)}
+.whats-inner{max-width:960px;margin:0 auto;padding:36px 0}
+.wi-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--m);margin-bottom:20px}
+.wi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);margin-bottom:20px}
+.wi-item{background:var(--s);padding:18px 16px}
+.wi-icon{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;color:var(--a);letter-spacing:1px;margin-bottom:8px}
+.wi-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;margin-bottom:6px}
+.wi-desc{font-size:10px;color:var(--m);line-height:1.65}
+.wi-price-hint{font-size:11px;color:var(--m);text-align:center;padding:14px;background:var(--s);border:1px solid var(--b2)}
+.wi-price-hint span{color:var(--a);font-family:'Syne',sans-serif;font-weight:700;font-size:13px}
+@media(max-width:700px){.wi-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.wi-grid{grid-template-columns:1fr}.hero-cta-row{flex-direction:column;align-items:stretch}.hero-btn-main,.hero-btn-sub{text-align:center}}
+
+/* HERO */
+.hero{padding:80px max(16px,5vw) 40px;border-bottom:1px solid var(--b)}
+.hero-inner{max-width:960px;margin:0 auto}
+.hero-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--m);display:flex;align-items:center;gap:8px;margin-bottom:16px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,52px);line-height:1.04;letter-spacing:-2px;margin-bottom:12px}
+h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--a)}
+.hero-desc{color:var(--m);font-size:12px;line-height:1.85;max-width:480px;margin-bottom:28px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hstat{display:flex;flex-direction:column}
+.hstat-n{font-family:'Inter',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.5px}
+.hstat-n span{color:var(--a)}
+.hstat-l{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-top:1px}
+
+/* FILTER BAR */
+.filter-wrap{padding:0 max(16px,5vw);border-bottom:1px solid var(--b);position:sticky;top:56px;z-index:100;background:var(--bg)}
+.filter-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:8px;overflow-x:auto;padding:12px 0;scrollbar-width:none}
+.filter-inner::-webkit-scrollbar{display:none}
+.f-btn{background:transparent;border:1px solid var(--b2);color:var(--m);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.f-btn:hover{border-color:var(--m);color:var(--t)}
+.f-btn.active{background:var(--acd);border-color:var(--acg);color:var(--a)}
+.f-count{margin-left:auto;font-size:9px;color:var(--m);letter-spacing:1px;flex-shrink:0;white-space:nowrap}
+
+/* CATALOG GRID */
+.catalog-wrap{padding:32px max(16px,5vw) 80px}
+.catalog-inner{max-width:960px;margin:0 auto}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b)}
+.prod-card{background:var(--s);cursor:pointer;transition:background .2s;position:relative;display:flex;flex-direction:column}
+.prod-card:hover{background:var(--s2)}
+.prod-card.hidden{display:none}
+.card-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--s2);display:flex;align-items:center;justify-content:center}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.prod-card:hover .card-img img{transform:scale(1.04)}
+.card-img-placeholder{display:flex;flex-direction:column;align-items:center;gap:6px}
+.card-emoji{font-size:32px}
+.card-badges{position:absolute;top:8px;left:8px;display:flex;flex-direction:column;gap:4px}
+.badge{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 7px;border:1px solid;display:inline-block}
+.badge.wow{background:var(--acd);border-color:var(--acg);color:var(--a)}
+.badge.new{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.2);color:var(--purple)}
+.badge.hot{background:rgba(255,77,77,.08);border-color:rgba(255,77,77,.2);color:var(--r)}
+.unlocked-badge{position:absolute;top:8px;right:8px;background:rgba(200,255,0,.9);color:#000;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 7px;display:none}
+.card-body{padding:14px;flex:1;display:flex;flex-direction:column;gap:0}
+.card-cat{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px}
+.card-name{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;line-height:1.3;margin-bottom:8px}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;border-top:1px solid var(--b)}
+.card-margin{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:var(--a)}
+.card-margin-lbl{font-size:7px;color:var(--m);letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.card-price{font-size:10px;color:var(--orange);font-family:'Inter',sans-serif;font-weight:500}
+.card-cta{margin:0 14px 14px;padding:9px;background:transparent;border:1px solid var(--b2);color:var(--m);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;text-align:center;width:calc(100% - 28px)}
+.prod-card:hover .card-cta{border-color:var(--a);color:var(--a);background:var(--acd)}
+
+/* EMPTY STATE */
+.empty-state{grid-column:1/-1;padding:60px;text-align:center;color:var(--m);font-size:12px}
+
+/* MODAL OVERLAY */
+#modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:300;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:16px;backdrop-filter:blur(6px)}
+#modal-overlay.open{display:flex}
+.modal{background:var(--s);border:1px solid var(--b2);width:100%;max-width:680px;margin:auto;position:relative}
+.modal-close{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--m);cursor:pointer;font-size:18px;line-height:1;z-index:10;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{color:var(--t)}
+
+/* MODAL: LOCKED STATE */
+.modal-locked{padding:0}
+.ml-img{aspect-ratio:16/9;background:var(--s2);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.ml-img img{width:100%;height:100%;object-fit:cover}
+.ml-img-placeholder{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ml-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(6,6,10,.95));z-index:2}
+.ml-badges{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:3}
+.ml-body{padding:20px}
+.ml-cat{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px}
+.ml-name{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(18px,3vw,26px);letter-spacing:-1px;margin-bottom:12px}
+.ml-name em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--a)}
+.ml-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);margin-bottom:18px}
+.ml-stat{background:var(--s2);padding:10px;text-align:center}
+.ml-stat-n{font-family:'Inter',sans-serif;font-weight:600;font-size:16px;letter-spacing:0}
+.ml-stat-l{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-top:2px}
+.ml-inc{margin-bottom:18px}
+.ml-inc-ttl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:10px}
+.ml-inc-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--b);font-size:11px}
+.ml-inc-row:last-child{border-bottom:none}
+.ml-inc-chk{color:var(--a);flex-shrink:0}
+.ml-inc-ico{font-size:10px;flex-shrink:0}
+
+/* PRICE + BUY */
+.ml-price-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;background:var(--s2);border:1px solid var(--b2);border-top:2px solid var(--orange);margin-bottom:12px}
+.ml-price-left .lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.ml-price-num{font-family:'Inter',sans-serif;font-weight:600;font-size:28px;letter-spacing:-.3px}
+.ml-price-num sup{font-size:12px;color:var(--m);font-weight:400}
+.ml-price-per{font-size:9px;color:var(--m);letter-spacing:1px;text-transform:uppercase}
+.btn-buy-modal{background:var(--a);color:#000;font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 20px;border:none;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.btn-buy-modal:hover{background:#b5e800;transform:translateY(-1px)}
+
+/* UNLOCK FORM */
+.ml-unlock{padding:14px;background:rgba(200,255,0,.04);border:1px solid var(--acg)}
+.ml-unlock-ttl{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--a);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ml-unlock-form{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end}
+.u-field{display:flex;flex-direction:column;gap:4px}
+.u-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m)}
+.u-inp{background:var(--s2);border:1px solid var(--b2);color:var(--t);font-family:'DM Mono',monospace;font-size:11px;padding:8px 10px;outline:none;width:100%;transition:border-color .2s}
+.u-inp:focus{border-color:var(--a)}
+.u-inp.err{border-color:var(--r)}
+.u-inp.ok-inp{border-color:var(--a)}
+.btn-unlock{background:var(--a);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border:none;cursor:pointer;white-space:nowrap;height:35px;transition:background .2s}
+.btn-unlock:hover{background:#b5e800}
+.u-msg{margin-top:8px;font-size:10px;display:none}
+.u-msg.err{color:var(--r);display:block}
+.u-msg.ok{color:var(--a);display:block}
+
+/* MODAL: UNLOCKED STATE */
+.modal-unlocked{display:none;padding:0}
+.mu-header{padding:16px 20px;border-bottom:1px solid var(--b);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.mu-title{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.5px}
+.mu-unlocked-tag{display:inline-flex;align-items:center;gap:5px;background:var(--acd);border:1px solid var(--acg);padding:4px 10px;font-size:8px;color:var(--a);letter-spacing:1.5px;text-transform:uppercase}
+.mu-section{padding:18px 20px;border-bottom:1px solid var(--b)}
+.mu-section:last-child{border-bottom:none}
+.mu-sec-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:14px}
+.mu-sup-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b)}
+.mu-sup{background:var(--s2);padding:14px}
+.mu-sup-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:3px}
+.mu-sup-badge{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;display:inline-block}
+.mu-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--b);font-size:10px}
+.mu-row:last-child{border-bottom:none}
+.mu-k{color:var(--m);font-size:9px}
+.mu-v{font-weight:500}
+.mu-v.g{color:var(--a)}
+.mu-v.o{color:var(--orange)}
+.sup-link{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--a);border-bottom:1px solid var(--acg);padding-bottom:2px;text-decoration:none}
+.sup-link:hover{opacity:.75}
+.margin-box-sm{background:var(--s2);border:1px solid var(--b2);padding:14px}
+.mrow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--b);font-size:10px}
+.mrow:last-child{border-bottom:none}
+.mrow-k{color:var(--m)}
+.mrow-v{font-family:'Inter',sans-serif;font-weight:600;font-size:13px}
+.mrow-v.neg{color:var(--r)}
+.mrow-v.neu{color:var(--t)}
+.margin-total{background:var(--acd);border:1px solid var(--acg);padding:12px 14px;margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+.mt-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--a)}
+.mt-val{font-family:'Inter',sans-serif;font-weight:600;font-size:22px;color:var(--a);letter-spacing:0}
+.mu-note{padding:10px 12px;background:rgba(200,255,0,.04);border:1px solid var(--acg);font-size:9px;color:var(--m);line-height:1.7;margin-top:10px}
+.mu-note strong{color:var(--a)}
+.hook-cards{display:flex;flex-direction:column;gap:8px}
+.hook-card{background:var(--s2);border:1px solid var(--b);padding:12px}
+.hook-num{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.hook-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:11px;margin-bottom:4px}
+.hook-desc{font-size:10px;color:var(--m);line-height:1.5;margin-bottom:6px}
+.hook-text{font-size:10px;color:var(--t);font-style:italic;border-left:2px solid var(--a);padding:6px 10px;background:var(--s)}
+.risk-grid-sm{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b)}
+.risk-sm{background:var(--s2);padding:10px 12px;display:flex;gap:8px}
+.risk-ico{font-size:13px;flex-shrink:0;margin-top:1px}
+.risk-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;margin-bottom:2px}
+.risk-sm.g .risk-ttl{color:var(--a)}
+.risk-sm.r .risk-ttl{color:var(--r)}
+.risk-desc{font-size:9px;color:var(--m);line-height:1.5}
+
+/* PAYMENT MODAL */
+#pay-modal{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:400;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(8px)}
+#pay-modal.open{display:flex}
+.pay-box{background:var(--s);border:1px solid var(--b2);width:100%;max-width:360px}
+.pay-hdr{padding:15px 18px;border-bottom:1px solid var(--b);display:flex;align-items:center;justify-content:space-between}
+.pay-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:12px}
+.pay-cls{background:none;border:none;color:var(--m);cursor:pointer;font-size:16px;line-height:1}
+.pay-cls:hover{color:var(--t)}
+.pay-body{padding:16px}
+.pay-prod{background:var(--s2);border:1px solid var(--b);padding:10px 12px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.pay-prod-n{font-size:10px;line-height:1.4}
+.pay-prod-p{font-family:'Inter',sans-serif;font-weight:600;font-size:16px;color:var(--orange)}
+.brow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--b);font-size:10px}
+.brow:last-child{border-bottom:none}
+.bk{font-size:8px;color:var(--m)}
+.bv{font-weight:500}
+.bv.ac{color:var(--a)}
+.brow-inner{display:flex;align-items:center;gap:6px}
+.copy-btn{background:var(--acd);border:1px solid var(--acg);color:var(--a);font-size:7px;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;cursor:pointer;font-family:'DM Mono',monospace;transition:background .2s}
+.copy-btn:hover{background:var(--acg)}
+.pay-note{margin-top:12px;padding:10px 12px;background:rgba(200,255,0,.04);border:1px solid var(--acg);font-size:9px;color:var(--m);line-height:1.7}
+.pay-note strong{color:var(--a)}
+.pay-cta{width:100%;margin-top:10px;padding:11px;background:var(--a);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.pay-cta:hover{background:#b5e800}
+
+/* UPSELL BANNER */
+.upsell-banner{background:var(--s);border-top:1px solid var(--acg);padding:24px max(16px,5vw);text-align:center}
+.upsell-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.ub-left{}
+.ub-badge{display:inline-flex;align-items:center;gap:5px;background:var(--acd);border:1px solid var(--acg);padding:3px 10px;font-size:7px;color:var(--a);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.ub-ttl{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.5px;margin-bottom:4px}
+.ub-desc{font-size:10px;color:var(--m);line-height:1.6}
+.ub-includes{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+.ub-includes span{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--a)}
+.btn-sub{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--a);font-family:'DM Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 22px;border:1px solid var(--a);cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-sub:hover{background:var(--acd)}
+
+/* TOAST */
+.toast{position:fixed;bottom:18px;left:14px;background:var(--s);border:1px solid var(--b2);padding:8px 12px;display:flex;align-items:center;gap:8px;font-size:11px;transform:translateY(80px);opacity:0;transition:all .4s;z-index:500;max-width:230px}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* CARD IMAGE — CATEGORY GRADIENT */
+.card-img-gradient{width:100%;height:100%;position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.card-img-glow{position:absolute;width:110px;height:110px;border-radius:50%;filter:blur(26px);opacity:.4;transition:opacity .4s;top:50%;left:50%;transform:translate(-50%,-50%)}
+.prod-card:hover .card-img-glow{opacity:.7}
+.card-img-emoji-lg{font-size:54px;position:relative;z-index:2;transition:transform .4s;line-height:1}
+.prod-card:hover .card-img-emoji-lg{transform:scale(1.12) translateY(-4px)}
+.card-img-margin-pill{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.1);padding:3px 9px;font-family:'Inter',sans-serif;font-weight:600;font-size:12px;color:var(--a);letter-spacing:0;z-index:3;backdrop-filter:blur(8px)}
+.card-rating{font-size:8px;color:var(--m);letter-spacing:.5px;margin-top:3px}
+
+/* ═══════════════════════════
+   LAUNCH PANEL
+═══════════════════════════ */
+.lp-section{margin-bottom:28px}
+.lp-section-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--m);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.lp-section-lbl::after{content:'';flex:1;height:1px;background:var(--b);max-width:80px}
+
+/* Budget */
+.lp-budget-rows{border:1px solid var(--b2);overflow:hidden}
+.lp-brow{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--b);transition:background .18s}
+.lp-brow:last-child{border-bottom:none}
+.lp-brow:hover{background:var(--s2)}
+.lp-brow-ico{font-size:16px;flex-shrink:0;width:26px;text-align:center}
+.lp-brow-info{flex:1;min-width:0}
+.lp-brow-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:2px}
+.lp-brow-note{font-size:9px;color:var(--m);letter-spacing:.3px}
+.lp-brow-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0}
+.lp-brow-cost{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:0}
+.lp-brow-cost.must{color:var(--t)}
+.lp-brow-cost.opt{color:var(--m)}
+.lp-brow-tag{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 6px;border:1px solid}
+.lp-brow-tag.must{background:rgba(200,255,0,.06);border-color:rgba(200,255,0,.18);color:var(--a)}
+.lp-brow-tag.opt{background:rgba(90,90,114,.08);border-color:rgba(90,90,114,.2);color:var(--m)}
+.lp-budget-total{margin-top:1px;padding:12px 14px;background:var(--acd);border:1px solid var(--acg);font-size:10px;color:var(--m);line-height:1.75}
+.lp-budget-total strong{color:var(--a)}
+
+/* Steps */
+.lp-steps{display:flex;flex-direction:column;gap:1px;background:var(--b)}
+.lp-step{background:var(--s2);padding:16px;display:flex;gap:14px;align-items:flex-start}
+.lp-step-left{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
+.lp-step-num{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m2)}
+.lp-step-ico{font-size:20px;line-height:1}
+.lp-step-line{width:1px;flex:1;min-height:12px;background:var(--b2);margin-top:4px}
+.lp-step:last-child .lp-step-line{display:none}
+.lp-step-body{flex:1;padding-top:2px}
+.lp-step-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:5px}
+.lp-step-desc{font-size:10px;color:var(--m);line-height:1.7}
+
+/* Channels */
+.lp-channels{display:flex;flex-direction:column;gap:1px;background:var(--b)}
+.lp-ch{background:var(--s2);padding:14px;display:flex;gap:12px;align-items:flex-start}
+.lp-ch-dot{width:6px;height:6px;background:var(--a);border-radius:50%;flex-shrink:0;margin-top:5px}
+.lp-ch-body{flex:1}
+.lp-ch-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.lp-ch-tag{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 6px;background:var(--acd);border:1px solid var(--acg);color:var(--a)}
+.lp-ch-desc{font-size:10px;color:var(--m);line-height:1.6}
+
+/* Packaging */
+.lp-pkg-note{padding:11px 14px;background:rgba(200,255,0,.04);border:1px solid var(--acg);font-size:10px;color:var(--m);line-height:1.7;margin-bottom:10px}
+.lp-pkg-note strong{color:var(--a)}
+.lp-pkg-rows{border:1px solid var(--b2);overflow:hidden}
+.lp-pkg-row{display:flex;flex-wrap:wrap;gap:4px;padding:10px 14px;border-bottom:1px solid var(--b);font-size:10px}
+.lp-pkg-row:last-child{border-bottom:none}
+.lp-pkg-name{font-family:'Syne',sans-serif;font-weight:700;font-size:11px;width:100%;margin-bottom:3px}
+.lp-pkg-where{color:var(--m);flex:1;font-size:9px}
+.lp-pkg-price{color:var(--orange);font-family:'Inter',sans-serif;font-weight:500;font-size:11px;flex-shrink:0}
+.lp-pkg-total{padding:9px 14px;font-size:9px;color:var(--m);background:var(--s);border:1px solid var(--b2);border-top:none}
+.lp-pkg-total strong{color:var(--a)}
+
+/* Timeline */
+.lp-timeline{display:flex;gap:0;background:var(--b);overflow:hidden}
+.lp-tl-item{flex:1;background:var(--s2);padding:14px 12px;position:relative;display:flex;flex-direction:column;gap:6px}
+.lp-tl-item::after{content:'→';position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--m2);font-size:11px;z-index:2}
+.lp-tl-item:last-child::after{display:none}
+.lp-tl-week{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--a)}
+.lp-tl-event{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;line-height:1.4}
+
+@media(max-width:600px){
+  .lp-timeline{flex-direction:column}
+  .lp-tl-item::after{content:'↓';right:auto;left:50%;bottom:-10px;top:auto;transform:translateX(-50%)}
+}
+
+/* CROSS-SELL */
+.rp-crosssell{padding:24px max(24px,4vw) 40px;border-top:1px solid var(--b);background:var(--s)}
+.rp-crosssell-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--m);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.rp-crosssell-label::after{content:'';flex:1;height:1px;background:var(--b);max-width:120px}
+.rp-cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b)}
+.rp-cs-card{background:var(--s2);display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer;transition:background .2s}
+.rp-cs-card:hover{background:var(--b2)}
+.rp-cs-thumb{width:52px;height:52px;border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.rp-cs-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:4px;line-height:1.3}
+.rp-cs-meta{display:flex;align-items:center;gap:8px}
+.rp-cs-margin{color:var(--a);font-family:'Inter',sans-serif;font-weight:600;font-size:13px}
+.rp-cs-price{color:var(--m);font-size:9px;letter-spacing:.5px}
+.rp-cs-arrow{margin-left:auto;color:var(--m);font-size:13px;transition:all .2s;flex-shrink:0}
+.rp-cs-card:hover .rp-cs-arrow{transform:translateX(4px);color:var(--a)}
+
+/* UNLOCK FLASH */
+#unlock-flash{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;background:rgba(6,6,10,.97);gap:12px}
+#unlock-flash.show{display:flex}
+.uf-emoji{font-size:64px;animation:uf-pop .45s cubic-bezier(.175,.885,.32,1.275) both}
+.uf-check{font-size:22px;color:var(--a);font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-1px;animation:uf-pop .45s .08s cubic-bezier(.175,.885,.32,1.275) both}
+.uf-sub{font-size:11px;color:var(--m);letter-spacing:1.5px;text-transform:uppercase;animation:uf-pop .45s .16s cubic-bezier(.175,.885,.32,1.275) both}
+@keyframes uf-pop{from{opacity:0;transform:scale(.65) translateY(18px)}to{opacity:1;transform:none}}
+
+/* MOBILE */
+@media(max-width:700px){
+  .catalog-grid{grid-template-columns:1fr 1fr}
+  .rp-cs-grid{grid-template-columns:1fr}
+  .rp-crosssell{padding:18px 16px 32px}
+  .ml-stats{grid-template-columns:1fr 1fr}
+  .ml-unlock-form{grid-template-columns:1fr}
+  .btn-unlock{width:100%;height:auto;padding:10px}
+  .ml-price-row{flex-direction:column;align-items:flex-start}
+  .btn-buy-modal{width:100%}
+  .mu-sup-grid{grid-template-columns:1fr}
+  .risk-grid-sm{grid-template-columns:1fr}
+  .upsell-inner{text-align:left}
+  h1{font-size:28px}
+}
+@media(max-width:420px){
+  .catalog-grid{grid-template-columns:1fr}
+  nav{height:52px;padding:0 14px}
+}
+/* ═══════════════════════════════════
+   REPORT VIEW — Full page unlocked
+═══════════════════════════════════ */
+#report-view{position:fixed;inset:0;background:var(--bg);z-index:350;overflow:hidden;display:none}
+.rp-wrap{min-height:100vh;display:flex;flex-direction:column}
+
+/* Header */
+.rp-header{position:sticky;top:0;z-index:20;background:rgba(6,6,10,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--b);height:54px;display:flex;align-items:center;padding:0 max(16px,4vw);gap:16px}
+.rp-back{background:none;border:none;color:var(--m);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;cursor:pointer;padding:0;transition:color .2s;white-space:nowrap;flex-shrink:0}
+.rp-back:hover{color:var(--t)}
+.rp-title{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.5px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-tag{display:inline-flex;align-items:center;gap:5px;background:var(--acd);border:1px solid var(--acg);padding:4px 10px;font-size:8px;color:var(--a);letter-spacing:1.5px;text-transform:uppercase;flex-shrink:0}
+
+/* Layout grid */
+.rp-layout{flex:1;display:grid;grid-template-columns:230px 1fr;align-items:start}
+
+/* Sidebar */
+.rp-sidebar{border-right:1px solid var(--b);padding:24px 20px;position:sticky;top:54px;height:calc(100vh - 54px);overflow-y:auto;display:flex;flex-direction:column;gap:0;scrollbar-width:thin;scrollbar-color:var(--b2) transparent}
+.rp-prod-thumb{aspect-ratio:4/3;background:var(--s2);border:1px solid var(--b);overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex-shrink:0;position:relative}
+.rp-prod-thumb img{width:100%;height:100%;object-fit:cover}
+.rp-prod-thumb-emoji{font-size:36px}
+.rp-prod-name{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;letter-spacing:-.3px;margin-bottom:3px}
+.rp-prod-cat{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-bottom:20px}
+.rp-nav{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--b);padding-top:14px}
+.rp-nav-btn{background:none;border:none;border-left:2px solid transparent;color:var(--m);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.5px;text-align:left;padding:10px 12px;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:10px}
+.rp-nav-btn:hover{color:var(--t);background:var(--s)}
+.rp-nav-btn.active{color:var(--a);background:var(--acd);border-left-color:var(--a)}
+.rp-nav-num{font-size:8px;color:var(--m2);letter-spacing:1px;flex-shrink:0}
+.rp-nav-btn.active .rp-nav-num{color:rgba(200,255,0,.5)}
+.rp-expiry{margin-top:auto;padding-top:18px;margin-top:24px;font-size:9px;color:var(--m);letter-spacing:.3px;line-height:1.8;border-top:1px solid var(--b)}
+.rp-expiry strong{color:var(--t)}
+
+/* Mobile tabs — hidden on desktop */
+.rp-mobile-tabs{display:none}
+
+/* Content area */
+.rp-content{padding:36px max(24px,4vw);min-height:calc(100vh - 54px)}
+.rp-panel{display:none}
+.rp-panel.active{display:block}
+.rp-panel-title{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-.7px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--b)}
+.rp-note{margin-top:14px;padding:12px 14px;background:rgba(200,255,0,.04);border:1px solid var(--acg);font-size:10px;color:var(--m);line-height:1.75}
+.rp-note strong{color:var(--a)}
+
+/* Supplier panel */
+.rp-sup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--b)}
+.rp-sup{background:var(--s2);padding:20px}
+.rp-sup-name{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;margin-bottom:3px}
+.rp-sup-badge{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:inline-block}
+.rp-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--b);font-size:11px}
+.rp-row:last-of-type{border-bottom:none}
+.rp-k{color:var(--m);font-size:10px}
+.rp-v{font-weight:500}
+.rp-v.g{color:var(--a)}
+.rp-v.o{color:var(--orange)}
+.rp-sup-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--a);border-bottom:1px solid var(--acg);padding-bottom:2px;text-decoration:none;transition:opacity .2s}
+.rp-sup-link:hover{opacity:.7}
+
+/* Margin panel */
+.rp-margin-sell{background:var(--s2);border:1px solid var(--b2);padding:20px 24px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.rp-margin-sell-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:4px}
+.rp-margin-sell-val{font-family:'Inter',sans-serif;font-weight:600;font-size:26px;letter-spacing:-.3px}
+.rp-margin-sell-hint{font-size:9px;color:var(--m);letter-spacing:1px;text-transform:uppercase}
+.rp-margin-rows{background:var(--s2);border:1px solid var(--b2);border-top:none;padding:0 24px}
+.rp-mrow{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--b);font-size:12px}
+.rp-mrow:last-child{border-bottom:none}
+.rp-mk{color:var(--m)}
+.rp-mv{font-family:'Inter',sans-serif;font-weight:600;font-size:14px}
+.rp-mv.neg{color:var(--r)}
+.rp-profit-box{margin-top:1px;background:var(--acd);border:1px solid var(--acg);padding:22px 24px;display:flex;justify-content:space-between;align-items:center}
+.rp-profit-left .rp-profit-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--a);margin-bottom:4px}
+.rp-profit-left .rp-profit-pct{font-size:10px;color:var(--m)}
+.rp-profit-val{font-family:'Inter',sans-serif;font-weight:600;font-size:38px;color:var(--a);letter-spacing:-1px;line-height:1}
+
+/* Hooks panel */
+.rp-hook-card{background:var(--s2);border:1px solid var(--b);padding:20px;margin-bottom:8px}
+.rp-hook-num{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.rp-hook-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;margin-bottom:5px}
+.rp-hook-desc{font-size:10px;color:var(--m);line-height:1.65;margin-bottom:12px}
+.rp-hook-text-wrap{background:var(--s);border-left:2px solid var(--a);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.rp-hook-text{font-size:11px;color:var(--t);font-style:italic;line-height:1.65;flex:1}
+.rp-copy{background:var(--acd);border:1px solid var(--acg);color:var(--a);font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;cursor:pointer;white-space:nowrap;transition:background .2s;flex-shrink:0;margin-top:2px}
+.rp-copy:hover{background:var(--acg)}
+
+/* Risks panel */
+.rp-risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b)}
+.rp-risk{background:var(--s2);padding:18px}
+.rp-risk-ico{font-size:18px;margin-bottom:10px}
+.rp-risk-ttl{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-bottom:5px}
+.rp-risk.g .rp-risk-ttl{color:var(--a)}
+.rp-risk.r .rp-risk-ttl{color:var(--r)}
+.rp-risk-desc{font-size:10px;color:var(--m);line-height:1.6}
+
+/* Mobile overrides */
+@media(max-width:768px){
+  .rp-layout{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .rp-sidebar{display:none}
+  .rp-mobile-tabs{display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--b);background:var(--s);position:sticky;top:54px;z-index:10}
+  .rp-mobile-tabs::-webkit-scrollbar{display:none}
+  .rp-tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--m);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:14px 18px;cursor:pointer;white-space:nowrap;transition:all .18s;flex-shrink:0}
+  .rp-tab.active{color:var(--a);border-bottom-color:var(--a)}
+  .rp-content{padding:20px 16px}
+  .rp-panel-title{font-size:16px;margin-bottom:16px}
+  .rp-profit-val{font-size:28px}
+  .rp-risk-grid{grid-template-columns:1fr}
+  .rp-margin-sell{flex-direction:column;align-items:flex-start;gap:4px}
+  .rp-margin-sell-val{font-size:22px}
+  .rp-hook-text-wrap{flex-direction:column}
+  .rp-copy{align-self:flex-start}
+}
+
+/* ═══════════════════════════════════════════
+   TRADELLE-STYLE SINGLE SCROLL REPORT
+═══════════════════════════════════════════ */
+
+/* Make content area single scroll */
+.rp-content{overflow-y:auto;height:calc(100vh - 54px);scroll-behavior:smooth}
+.rp-panel{display:block !important}
+.rp-panel.hidden-panel{display:none !important}
+
+/* Section wrapper */
+.td-section{padding:28px max(20px,3vw);border-bottom:1px solid var(--b)}
+.td-section:last-child{border-bottom:none;padding-bottom:60px}
+.td-sec-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--m);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.td-sec-lbl::after{content:'';flex:1;height:1px;background:var(--b);max-width:60px}
+.td-sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.5px;margin-bottom:18px}
+
+/* OVERVIEW — image + 3 stats + supplier links */
+.td-overview-hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+@media(max-width:600px){.td-overview-hero{grid-template-columns:1fr}}
+.td-img-box{aspect-ratio:4/3;background:var(--s2);border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.td-img-box img{width:100%;height:100%;object-fit:cover}
+.td-img-emoji{font-size:72px;line-height:1}
+.td-overview-right{display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.td-prod-name-big{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(16px,2.5vw,24px);letter-spacing:-.5px;line-height:1.2;margin-bottom:6px}
+.td-prod-desc{font-size:11px;color:var(--m);line-height:1.75}
+.td-stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b)}
+.td-stat3-item{background:var(--s2);padding:12px 10px;text-align:center}
+.td-stat3-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px}
+.td-stat3-val{font-family:'Inter',sans-serif;font-weight:600;font-size:18px;letter-spacing:0}
+.td-sup-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.td-sup-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--b2);background:transparent;color:var(--m);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all .18s}
+.td-sup-btn:hover{border-color:var(--a);color:var(--a);background:var(--acd)}
+.td-sup-btn svg{width:12px;height:12px;flex-shrink:0}
+
+/* PROFIT CALCULATOR */
+.td-calc-box{background:var(--s2);border:1px solid var(--b2);padding:20px}
+.td-calc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:8px}
+.td-calc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px}
+.td-calc-reset{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--a);cursor:pointer;background:none;border:none;font-family:'DM Mono',monospace;padding:0}
+.td-calc-reset:hover{opacity:.7}
+.td-calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+@media(max-width:560px){.td-calc-grid{grid-template-columns:1fr}}
+.td-calc-field{display:flex;flex-direction:column;gap:6px}
+.td-calc-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m)}
+.td-calc-val{font-family:'Inter',sans-serif;font-weight:600;font-size:20px;letter-spacing:0}
+.td-range{-webkit-appearance:none;appearance:none;width:100%;height:3px;background:var(--b2);outline:none;margin-top:4px}
+.td-range::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--a);cursor:pointer;border:none}
+.td-range::-moz-range-thumb{width:14px;height:14px;background:var(--a);cursor:pointer;border:none;border-radius:0}
+.td-calc-results{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--b)}
+.td-calc-res{background:var(--acd);padding:14px 16px;text-align:center}
+.td-calc-res.sec{background:var(--s)}
+.td-calc-res-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px}
+.td-calc-res-val{font-family:'Inter',sans-serif;font-weight:600;font-size:22px;color:var(--a);letter-spacing:0}
+.td-calc-res.sec .td-calc-res-val{color:var(--t)}
+.td-calc-extras{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);margin-top:1px}
+@media(max-width:560px){.td-calc-extras{grid-template-columns:repeat(2,1fr)}}
+.td-calc-ext{background:var(--s2);padding:10px 12px}
+.td-calc-ext-lbl{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-bottom:4px}
+.td-calc-ext-val{font-family:'Inter',sans-serif;font-weight:500;font-size:12px}
+
+/* CALC — editable inputs + tooltips */
+.td-calc-tip{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid var(--m2);color:var(--m);font-size:8px;cursor:help;flex-shrink:0;position:relative}
+.td-calc-tip:hover::after{content:attr(data-tip);position:absolute;left:18px;top:-4px;background:#1c1c26;color:var(--t);font-size:9px;line-height:1.5;padding:6px 10px;white-space:normal;width:180px;border:1px solid var(--b2);z-index:99;font-family:'DM Mono',monospace;font-weight:400;letter-spacing:.3px}
+.td-calc-lbl-row{display:flex;align-items:center;gap:5px}
+.td-calc-inp-big{background:var(--bg);border:1px solid var(--b2);color:var(--t);font-family:'Inter',sans-serif;font-weight:500;font-size:20px;padding:7px 10px;outline:none;width:100%;transition:border-color .2s;letter-spacing:0;margin-bottom:4px}
+.td-calc-inp-big:focus{border-color:var(--a)}
+.td-calc-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);margin-bottom:16px}
+@media(max-width:560px){.td-calc-grid4{grid-template-columns:1fr 1fr}}
+.td-calc-cost-box{background:var(--s);padding:12px 14px}
+.td-calc-cost-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.td-calc-cost-inp{background:transparent;border:none;border-bottom:1px solid var(--b2);color:var(--t);font-family:'Inter',sans-serif;font-weight:500;font-size:15px;padding:3px 0;outline:none;width:100%;transition:border-color .2s}
+.td-calc-cost-inp:focus{border-bottom-color:var(--a)}
+.td-calc-res2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b);margin-bottom:1px}
+.td-calc-res2-item{background:var(--s);padding:14px 16px;text-align:center}
+.td-calc-res2-item.hi{background:var(--acd)}
+.td-calc-res2-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:4px}
+.td-calc-res2-val{font-family:'Inter',sans-serif;font-weight:600;font-size:22px;color:var(--t);letter-spacing:0}
+.td-calc-res2-item.hi .td-calc-res2-val{color:var(--a)}
+
+/* DEMAND & SATURATION */
+.td-demand-grid{display:grid;grid-template-columns:1fr 200px;gap:1px;background:var(--b)}
+@media(max-width:600px){.td-demand-grid{grid-template-columns:1fr}}
+.td-demand-chart-box{background:var(--s2);padding:16px}
+.td-demand-chart-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:12px}
+.td-demand-svg{width:100%;height:90px;display:block}
+.td-demand-months{display:flex;justify-content:space-between;margin-top:6px;padding:0 2px}
+.td-demand-month{font-size:7px;color:var(--m2);letter-spacing:.3px}
+.td-sat-box{background:var(--s2);padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.td-sat-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:16px}
+.td-sat-svg{width:130px;height:72px;display:block;margin:0 auto}
+.td-sat-text{margin-top:10px}
+.td-sat-desc{font-family:'Inter',sans-serif;font-weight:600;font-size:12px;margin-bottom:2px}
+.td-sat-stores{font-size:9px;color:var(--m)}
+
+/* SOCIAL TARGETING */
+.td-target-grid{display:grid;grid-template-columns:1fr auto auto;gap:1px;background:var(--b)}
+@media(max-width:580px){.td-target-grid{grid-template-columns:1fr}}
+.td-target-interests{background:var(--s2);padding:16px}
+.td-target-int-lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--m);margin-bottom:12px}
+.td-target-int-hdr{display:flex;justify-content:space-between;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--m2);padding:0 0 6px;border-bottom:1px solid var(--b);margin-bottom:4px}
+.td-target-int-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--b);font-size:11px}
+.td-target-int-row:last-child{border-bottom:none}
+.td-target-int-name{color:var(--t)}
+.td-target-int-size{color:var(--m);font-size:10px;font-family:'Inter',sans-serif;font-weight:500}
+.td-target-stat{background:var(--s2);padding:16px;min-width:120px;display:flex;flex-direction:column;justify-content:center;gap:0}
+.td-target-stat-lbl{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-bottom:4px}
+.td-target-stat-val{font-family:'Inter',sans-serif;font-weight:600;font-size:16px;letter-spacing:0}
+.td-target-stat-sub{font-size:9px;color:var(--m);margin-top:3px}
+
+/* COMPLEMENTS */
+.td-comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b)}
+@media(max-width:500px){.td-comp-grid{grid-template-columns:repeat(2,1fr)}}
+.td-comp-card{background:var(--s2);padding:14px;display:flex;flex-direction:column;gap:8px}
+.td-comp-emoji{font-size:28px;line-height:1}
+.td-comp-name{font-family:'Syne',sans-serif;font-weight:700;font-size:11px;line-height:1.3}
+.td-comp-cost{color:var(--orange);font-family:'Inter',sans-serif;font-weight:500;font-size:13px}
+.td-comp-where{font-size:9px;color:var(--m)}
+.td-comp-link{display:inline-flex;align-items:center;gap:4px;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--a);text-decoration:none;margin-top:2px;border-bottom:1px solid var(--acg);padding-bottom:1px;transition:opacity .18s}
+.td-comp-link:hover{opacity:.7}
+
+/* REVIEWS */
+.td-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b)}
+@media(max-width:700px){.td-reviews-grid{grid-template-columns:1fr}}
+.td-review-card{background:var(--s2);padding:16px;display:flex;flex-direction:column;gap:10px}
+.td-review-stars{display:flex;gap:2px}
+.td-star{color:var(--gold);font-size:12px}
+.td-review-text{font-size:11px;color:var(--m);line-height:1.75;flex:1}
+.td-review-author{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--m2)}
+
+/* INFLUENCERS */
+.td-inf-grid{display:flex;flex-wrap:wrap;gap:8px}
+.td-inf-tag{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--s2);border:1px solid var(--b2);font-size:11px;color:var(--t);font-family:'DM Mono',monospace}
+.td-inf-tag::before{content:'@';color:var(--a);font-family:'Syne',sans-serif;font-weight:700}
+.td-inf-empty{padding:20px;background:var(--s2);border:1px dashed var(--b2);text-align:center;font-size:11px;color:var(--m2);font-style:italic}
+
+/* Sidebar anchor nav */
+.rp-nav-btn.rp-anchor-btn{cursor:pointer}
+.rp-nav-btn.rp-anchor-btn:hover{color:var(--t);background:var(--s)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M70 8L92 8L92 30L55 67L33 45Z" fill="none" stroke="#c8ff00" stroke-width="8" stroke-linejoin="round"/>
+      <circle cx="78" cy="22" r="6" fill="none" stroke="#c8ff00" stroke-width="7"/>
+      <path d="M20 55L45 80L8 92Z" fill="none" stroke="#c8ff00" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M33 45L20 55M55 67L45 80" stroke="#c8ff00" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <div class="logo-text">PRODUCT<span>DROP</span>.MN</div>
+  </a>
+  <div class="nav-right">
+    <button class="nav-sub-btn" onclick="window.open('https://productdrop3.netlify.app','_blank')">Pro Plan →</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-lbl"><div class="live-dot"></div>Verified бизнес план · Монголд туршсан</div>
+    <h1>Бараа сонгосон.<br><em>Бизнес эхлүүлэх</em> л үлдлээ.</h1>
+    <p class="hero-desc">1688 supplier линк, margin тооцоо, reel hook текст — нэг барааны хувьд бүгд хийгдсэн. Чи захиалаад зарна.</p>
+    <div class="hero-cta-row">
+      <button class="hero-btn-main" onclick="document.getElementById('catalog-anchor').scrollIntoView({behavior:'smooth'})">Бараа харах ↓</button>
+      <button class="hero-btn-sub" onclick="window.open('https://productdrop3.netlify.app','_blank')">Pro Plan — ₮49,900/сар →</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n" id="total-count"><span>—</span></div><div class="hstat-l">Бэлэн бараа</div></div>
+      <div class="hstat"><div class="hstat-n"><span style="color:var(--orange)">₮9,900</span></div><div class="hstat-l">Нэг бизнес план</div></div>
+      <div class="hstat"><div class="hstat-n"><span style="color:var(--a)">100%</span></div><div class="hstat-l">Монголд шинэ бараа</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT YOU GET -->
+<div class="whats-in">
+  <div class="whats-inner">
+    <div class="wi-label">Нэг бизнес план агуулна:</div>
+    <div class="wi-grid">
+      <div class="wi-item">
+        <div class="wi-icon">01</div>
+        <div class="wi-title">Supplier линк</div>
+        <div class="wi-desc">1688 + Taobao-ын жинхэнэ линк, авах үнэ, MOQ, хүргэлтийн хугацаа</div>
+      </div>
+      <div class="wi-item">
+        <div class="wi-icon">02</div>
+        <div class="wi-title">Margin тооцоо</div>
+        <div class="wi-desc">Тээвэр, зар, хүргэлт — бүх зардлыг тооцоолсон. Цэвэр ашиг харагдана.</div>
+      </div>
+      <div class="wi-item">
+        <div class="wi-icon">03</div>
+        <div class="wi-title">3 Reel hook</div>
+        <div class="wi-desc">Камерт шууд уншиж болох контент текст. TikTok, Instagram-д бэлэн.</div>
+      </div>
+      <div class="wi-item">
+        <div class="wi-icon">04</div>
+        <div class="wi-title">Эрсдэл шинжилгээ</div>
+        <div class="wi-desc">Давуу тал, сул тал — шударгаар. Бизнес эхлэхийн өмнө мэддэг байх зүйлс.</div>
+      </div>
+    </div>
+    <div class="wi-price-hint">Бүгд нэг барааны хувьд → <span>₮9,900</span> · Нэг удаагийн төлбөр</div>
+  </div>
+</div>
+
+<!-- ANCHOR + FILTER -->
+<div id="catalog-anchor"></div>
+<div class="filter-wrap">
+  <div class="filter-inner">
+    <button class="f-btn active" onclick="filterCat('all',this)">Бүгд</button>
+    <button class="f-btn" onclick="filterCat('auto',this)">🚗 Авто</button>
+    <button class="f-btn" onclick="filterCat('home',this)">🏠 Гэр</button>
+    <button class="f-btn" onclick="filterCat('beauty',this)">✨ Гоо сайхан</button>
+    <button class="f-btn" onclick="filterCat('health',this)">💪 Эрүүл мэнд</button>
+    <button class="f-btn" onclick="filterCat('kids',this)">🧸 Хүүхэд</button>
+    <div class="f-count" id="f-count"></div>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<div class="catalog-wrap">
+  <div class="catalog-inner">
+    <div class="catalog-grid" id="catalog-grid">
+      <!-- JS-ээс render хийгдэнэ -->
+    </div>
+  </div>
+</div>
+
+<!-- UPSELL -->
+<div class="upsell-banner">
+  <div class="upsell-inner">
+    <div class="ub-left">
+      <div class="ub-badge"><div class="live-dot"></div>Pro Subscription</div>
+      <div class="ub-ttl">Сард <span style="color:var(--a)">20 бараа</span> — нэг нь ₮2,495</div>
+      <div class="ub-desc">Нэг барааг ₮9,900-д авахын оронд — сард 20-ийг ₮49,900-д. Шинэ бараа сар бүр нэмэгдэнэ.</div>
+      <div class="ub-includes">
+        <span>✓ Supplier линк</span><span>✓ Margin</span><span>✓ Reel hook</span><span>✓ Эрсдэл</span>
+      </div>
+    </div>
+    <button class="btn-sub" onclick="window.open('https://productdrop3.netlify.app','_blank')">Pro Plan авах — ₮49,900/сар →</button>
+  </div>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="main-modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <!-- LOCKED STATE -->
+    <div class="modal-locked" id="modal-locked">
+      <div class="ml-img" id="ml-img">
+        <div class="ml-img-placeholder" id="ml-img-ph">
+          <div id="ml-emoji" style="font-size:48px">📦</div>
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--m)" id="ml-img-lbl">Бараа</div>
+        </div>
+        <div class="ml-overlay"></div>
+        <div class="ml-badges" id="ml-badges"></div>
+      </div>
+      <div class="ml-body">
+        <div class="ml-cat" id="ml-cat">Ангилал</div>
+        <div class="ml-name" id="ml-name">Бараа</div>
+        <div class="ml-stats" id="ml-stats">
+          <div class="ml-stat"><div class="ml-stat-n" id="mls-margin" style="color:var(--a)">—</div><div class="ml-stat-l">Margin</div></div>
+          <div class="ml-stat"><div class="ml-stat-n" id="mls-buy" style="color:var(--orange)">—</div><div class="ml-stat-l">Авах үнэ</div></div>
+          <div class="ml-stat"><div class="ml-stat-n" id="mls-install">—</div><div class="ml-stat-l">Суурилуулалт</div></div>
+          <div class="ml-stat"><div class="ml-stat-n" id="mls-rating" style="color:var(--a)">—</div><div class="ml-stat-l">Үнэлгээ</div></div>
+        </div>
+        <div class="ml-inc">
+          <div class="ml-inc-ttl">Энэ план агуулна:</div>
+          <div class="ml-inc-row"><span class="ml-inc-chk">✓</span> 1688 + Taobao supplier линк <span class="ml-inc-ico" id="li1">🔒</span></div>
+          <div class="ml-inc-row"><span class="ml-inc-chk">✓</span> Авах үнэ, тээвэр, margin тооцоо <span class="ml-inc-ico" id="li2">🔒</span></div>
+          <div class="ml-inc-row"><span class="ml-inc-chk">✓</span> Монголын зарах үнэ + ашгийн тооцоо <span class="ml-inc-ico" id="li3">🔒</span></div>
+          <div class="ml-inc-row"><span class="ml-inc-chk">✓</span> 3 reel hook текст бэлэн <span class="ml-inc-ico" id="li4">🔒</span></div>
+          <div class="ml-inc-row"><span class="ml-inc-chk">✓</span> Эрсдэл шинжилгээ + зөвлөмж <span class="ml-inc-ico" id="li5">🔒</span></div>
+        </div>
+        <div class="ml-price-row">
+          <div class="ml-price-left">
+            <div class="lbl">Нэг удаагийн — Бизнес план</div>
+            <div class="ml-price-num"><sup>₮</sup>9,900</div>
+            <div class="ml-price-per">нэг удаа · дахин төлбөргүй</div>
+          </div>
+          <button class="btn-buy-modal" id="btn-buy-modal" onclick="openPayModal()">Авах →</button>
+        </div>
+        <div class="ml-unlock">
+          <div class="ml-unlock-ttl"><span>🔐</span> Аль хэдийн худалдаж авсан уу?</div>
+          <div class="ml-unlock-form">
+            <div class="u-field">
+              <div class="u-lbl">Нэр (захиалгын нэр)</div>
+              <input type="text" id="u-name" class="u-inp" placeholder="Билгүүн" autocomplete="off">
+            </div>
+            <div class="u-field">
+              <div class="u-lbl">Нэвтрэх код</div>
+              <input type="text" id="u-code" class="u-inp" placeholder="PD-XXX-XXXX-XXXXX" autocomplete="off" style="text-transform:uppercase">
+            </div>
+            <button class="btn-unlock" onclick="tryUnlock()">Нээх →</button>
+          </div>
+          <div class="u-msg" id="u-msg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div id="pay-modal" onclick="handlePayOverlay(event)">
+  <div class="pay-box">
+    <div class="pay-hdr">
+      <div class="pay-ttl">🏦 Дансаар төлөх</div>
+      <button class="pay-cls" onclick="closePayModal()">✕</button>
+    </div>
+    <div class="pay-body">
+      <div class="pay-prod">
+        <div class="pay-prod-n" id="pay-prod-name">Бизнес план</div>
+        <div class="pay-prod-p">₮9,900</div>
+      </div>
+      <div class="brow"><span class="bk">Банк</span><span class="bv">Хаан Банк</span></div>
+      <div class="brow">
+        <span class="bk">Дансны дугаар</span>
+        <div class="brow-inner"><span class="bv ac">5018953118</span><button class="copy-btn" onclick="copyAcc()">Хуулах</button></div>
+      </div>
+      <div class="brow"><span class="bk">Хүлээн авагч</span><span class="bv">Ганбаяр Цэвэгмид</span></div>
+      <div class="brow"><span class="bk">Дүн</span><span class="bv ac">₮9,900</span></div>
+      <div class="brow"><span class="bk">Гүйлгээний утга</span><span class="bv" id="pay-ref">ПЛАН + нэр</span></div>
+      <div class="pay-note">
+        <strong>📱 Төлсний дараа:</strong> Screenshot-оо <strong>@ProductDropMN</strong>-д DM илгээнэ үү. <strong>30 мин</strong> дотор нэвтрэх код явуулна.
+      </div>
+      <button class="pay-cta" onclick="closePayModal()">Ойлголоо — Төлбөр хийх</button>
+    </div>
+  </div>
+</div>
+
+<!-- REPORT VIEW — Tradelle-style single scroll -->
+<div id="report-view">
+  <div class="rp-wrap">
+
+    <div class="rp-header">
+      <button class="rp-back" onclick="closeReport()">← Буцах</button>
+      <div class="rp-title" id="rp-title">Бараа</div>
+      <div class="rp-tag"><div class="live-dot"></div>Нээгдсэн</div>
+    </div>
+
+    <div class="rp-layout">
+
+      <!-- SIDEBAR (desktop only) -->
+      <aside class="rp-sidebar">
+        <div class="rp-prod-thumb" id="rp-prod-thumb"></div>
+        <div class="rp-prod-name" id="rp-prod-name"></div>
+        <div class="rp-prod-cat" id="rp-prod-cat"></div>
+        <nav class="rp-nav" id="rp-anchor-nav">
+          <button class="rp-nav-btn rp-anchor-btn active" onclick="scrollToSection('sec-overview')"><span class="rp-nav-num">01</span>Бараа</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-supplier')"><span class="rp-nav-num">02</span>Supplier</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-calc')"><span class="rp-nav-num">03</span>Ашгийн тооцоо</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-demand')"><span class="rp-nav-num">04</span>Эрэлтийн шинжилгээ</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-target')"><span class="rp-nav-num">05</span>Social Targeting</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-hooks')"><span class="rp-nav-num">06</span>Reel Hooks</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-complements')"><span class="rp-nav-num">07</span>Нэмэлт бараа</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-influencers')"><span class="rp-nav-num">08</span>Influencer</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-risks')"><span class="rp-nav-num">09</span>Эрсдэл</button>
+          <button class="rp-nav-btn rp-anchor-btn" onclick="scrollToSection('sec-launch')" style="border-left:2px solid transparent"><span class="rp-nav-num" style="color:var(--orange)">10</span><span style="color:var(--orange)">Эхлүүлэх →</span></button>
+        </nav>
+        <div class="rp-expiry" id="rp-expiry"></div>
+      </aside>
+
+      <!-- CONTENT: single scroll -->
+      <div class="rp-content" id="rp-scroll-area">
+
+        <!-- 01 БАРАА OVERVIEW -->
+        <div class="td-section" id="sec-overview">
+          <div class="td-sec-lbl">01 · Бараа</div>
+          <div class="td-overview-hero">
+            <div class="td-img-box" id="td-img-box">
+              <div id="td-img-ph" style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                <div id="td-emoji" style="font-size:72px">📦</div>
+              </div>
+            </div>
+            <div class="td-overview-right">
+              <div>
+                <div class="td-prod-name-big" id="td-prod-name-big">Бараа</div>
+                <div class="td-prod-desc" id="td-prod-desc">—</div>
+              </div>
+              <div>
+                <div class="td-stat3" id="td-stat3"></div>
+                <div class="td-sup-links" id="td-sup-links"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 SUPPLIER -->
+        <div class="td-section" id="sec-supplier">
+          <div class="td-sec-lbl">02 · Supplier мэдээлэл</div>
+          <div id="rp-suppliers"></div>
+          <div class="rp-note" id="rp-sup-note" style="margin-top:10px"></div>
+        </div>
+
+        <!-- 03 АШГИЙН ТООЦОО — Calculator -->
+        <div class="td-section" id="sec-calc">
+          <div class="td-sec-lbl">03 · Ашгийн тооцоо</div>
+          <div class="td-calc-box">
+            <div class="td-calc-header">
+              <div class="td-calc-title">Ашгийн тооцоолуур</div>
+              <button class="td-calc-reset" onclick="resetCalc()">Reset</button>
+            </div>
+            <!-- Top 2: Selling price + Qty -->
+            <div class="td-calc-grid" style="margin-bottom:16px">
+              <div class="td-calc-field">
+                <div class="td-calc-lbl-row td-calc-lbl">
+                  Зарах үнэ ₮
+                  <span class="td-calc-tip" data-tip="Shopify эсвэл Facebook дэлгүүрт харилцагчаас авах үнэ">?</span>
+                </div>
+                <input type="number" class="td-calc-inp-big" id="calc-sell-inp" min="0" step="1000" oninput="syncSellRange()" placeholder="₮0">
+                <input type="range" class="td-range" id="calc-sell-range" min="10000" max="2000000" step="5000" oninput="syncSellInput()">
+              </div>
+              <div class="td-calc-field">
+                <div class="td-calc-lbl-row td-calc-lbl">
+                  Борлуулалтын тоо
+                  <span class="td-calc-tip" data-tip="Тооцоолохыг хүсэж буй борлуулалтын ширхэг тоо">?</span>
+                </div>
+                <input type="number" class="td-calc-inp-big" id="calc-qty-inp" min="1" step="1" oninput="syncQtyRange()" placeholder="0">
+                <input type="range" class="td-range" id="calc-qty-range" min="1" max="1000" step="1" oninput="syncQtyInput()">
+              </div>
+            </div>
+            <!-- Cost inputs: 4 editable fields -->
+            <div class="td-calc-grid4">
+              <div class="td-calc-cost-box">
+                <div class="td-calc-cost-lbl">
+                  Бараа өртөг ₮
+                  <span class="td-calc-tip" data-tip="Supplier-с авах нэгж үнэ (тээвэр орохгүй)">?</span>
+                </div>
+                <input type="number" class="td-calc-cost-inp" id="calc-cost-inp" min="0" step="500" oninput="updateCalc()" placeholder="0">
+              </div>
+              <div class="td-calc-cost-box">
+                <div class="td-calc-cost-lbl">
+                  Тээврийн зардал ₮
+                  <span class="td-calc-tip" data-tip="Монгол хүртэлх тээвэр + дотоод хүргэлтийн нийт зардал">?</span>
+                </div>
+                <input type="number" class="td-calc-cost-inp" id="calc-ship-inp" min="0" step="500" oninput="updateCalc()" placeholder="0">
+              </div>
+              <div class="td-calc-cost-box">
+                <div class="td-calc-cost-lbl">
+                  Бусад зардал ₮
+                  <span class="td-calc-tip" data-tip="Зар сурталчилгаа, савлагаа, платформ шимтгэл гэх мэт">?</span>
+                </div>
+                <input type="number" class="td-calc-cost-inp" id="calc-other-inp" min="0" step="500" oninput="updateCalc()" placeholder="0">
+              </div>
+              <div class="td-calc-cost-box">
+                <div class="td-calc-cost-lbl">
+                  Зарын зардал ₮
+                  <span class="td-calc-tip" data-tip="Facebook/Instagram зарын зардал — 0 үлдээвэл органик гэж тооцно">?</span>
+                </div>
+                <input type="number" class="td-calc-cost-inp" id="calc-ad-inp" min="0" step="500" oninput="updateCalc()" placeholder="0">
+              </div>
+            </div>
+            <!-- Results -->
+            <div class="td-calc-res2">
+              <div class="td-calc-res2-item">
+                <div class="td-calc-res2-lbl">
+                  Цэвэр ашиг / ширхэг
+                  <span class="td-calc-tip" data-tip="Нэг ширхэг зарсан тохиолдолд гарах цэвэр орлого">?</span>
+                </div>
+                <div class="td-calc-res2-val" id="calc-net">—</div>
+              </div>
+              <div class="td-calc-res2-item hi">
+                <div class="td-calc-res2-lbl">
+                  Нийт потенциал ашиг
+                  <span class="td-calc-tip" data-tip="Борлуулалтын тоо × Цэвэр ашиг / ширхэг">?</span>
+                </div>
+                <div class="td-calc-res2-val" id="calc-total">—</div>
+              </div>
+            </div>
+            <!-- Extra metrics -->
+            <div class="td-calc-extras" id="calc-extras"></div>
+          </div>
+        </div>
+
+        <!-- 04 ЭРЭЛТИЙН ШИНЖИЛГЭЭ -->
+        <div class="td-section" id="sec-demand">
+          <div class="td-sec-lbl">04 · Эрэлтийн шинжилгээ</div>
+          <div class="td-demand-grid">
+            <div class="td-demand-chart-box">
+              <div class="td-demand-chart-lbl">Улирлын эрэлт</div>
+              <svg class="td-demand-svg" id="td-demand-chart" viewBox="0 0 300 90" preserveAspectRatio="none"></svg>
+              <div class="td-demand-months">
+                <span class="td-demand-month">1-р сар</span>
+                <span class="td-demand-month">3</span>
+                <span class="td-demand-month">5</span>
+                <span class="td-demand-month">7</span>
+                <span class="td-demand-month">9</span>
+                <span class="td-demand-month">11</span>
+                <span class="td-demand-month">12-р сар</span>
+              </div>
+            </div>
+            <div class="td-sat-box">
+              <div class="td-sat-lbl">Saturation</div>
+              <svg class="td-sat-svg" id="td-sat-gauge" viewBox="0 0 130 72"></svg>
+              <div class="td-sat-text">
+                <div class="td-sat-desc" id="td-sat-desc">—</div>
+                <div class="td-sat-stores" id="td-sat-stores">—</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 SOCIAL TARGETING -->
+        <div class="td-section" id="sec-target">
+          <div class="td-sec-lbl">05 · Social Media Targeting</div>
+          <div class="td-target-grid">
+            <div class="td-target-interests">
+              <div class="td-target-int-lbl">Interest бүлгүүд</div>
+              <div class="td-target-int-hdr"><span>Interest</span><span>Audience</span></div>
+              <div id="td-target-ints"></div>
+            </div>
+            <div class="td-target-stat">
+              <div class="td-target-stat-lbl">Хүйс</div>
+              <div class="td-target-stat-val" id="td-target-gender">—</div>
+            </div>
+            <div class="td-target-stat">
+              <div class="td-target-stat-lbl">Нас</div>
+              <div class="td-target-stat-val" id="td-target-age">—</div>
+              <div class="td-target-stat-sub">Нийт audience</div>
+              <div class="td-target-stat-val" id="td-target-total" style="margin-top:4px;color:var(--a)">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 REEL HOOKS -->
+        <div class="td-section" id="sec-hooks">
+          <div class="td-sec-lbl">06 · Reel Hooks</div>
+          <div id="rp-hooks"></div>
+        </div>
+
+        <!-- 07 НЭМЭЛТ БАРАА -->
+        <div class="td-section" id="sec-complements">
+          <div class="td-sec-lbl">07 · Нэмэлт бараа &amp; Upsale</div>
+          <div class="td-comp-grid" id="td-complements"></div>
+        </div>
+
+        <!-- 08 INFLUENCER -->
+        <div class="td-section" id="sec-influencers">
+          <div class="td-sec-lbl">08 · Монгол Influencer-үүд</div>
+          <div id="td-influencers" class="td-inf-grid"></div>
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap" id="inf-add-row">
+            <input type="text" id="inf-inp" class="u-inp" placeholder="@username эсвэл profile URL" style="flex:1;min-width:200px;max-width:340px;font-size:11px" onkeydown="if(event.key==='Enter')addInfluencer()">
+            <button onclick="addInfluencer()" style="background:var(--a);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 16px;border:none;cursor:pointer;white-space:nowrap">Link +</button>
+          </div>
+        </div>
+
+        <!-- 09 ЭРСДЭЛ -->
+        <div class="td-section" id="sec-risks">
+          <div class="td-sec-lbl">09 · Эрсдэл + давуу тал</div>
+          <div class="rp-risk-grid" id="rp-risks"></div>
+        </div>
+
+        <!-- 10 LAUNCH GUIDE -->
+        <div class="td-section" id="sec-launch">
+          <div class="td-sec-lbl" style="color:var(--orange)">10 · 🚀 Бизнес эхлүүлэх гарын авлага</div>
+          <div id="rp-launch"></div>
+        </div>
+
+        <!-- CROSS-SELL -->
+        <div class="rp-crosssell" id="rp-crosssell-wrap">
+          <div class="rp-crosssell-label">Дараагийн бараа</div>
+          <div class="rp-cs-grid" id="rp-cs-grid"></div>
+        </div>
+
+      </div><!-- end rp-content -->
+    </div><!-- end rp-layout -->
+
+  </div>
+</div>
+
+<!-- UNLOCK FLASH -->
+<div id="unlock-flash">
+  <div class="uf-emoji" id="uf-emoji-el">📦</div>
+  <div class="uf-check" id="uf-title-el">✓ Нээгдлээ</div>
+  <div class="uf-sub">Бизнес план бэлэн</div>
+</div>
+<div class="toast" id="toast">
+  <div id="t-av" style="font-size:15px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0">🧑</div>
+  <div>
+    <div style="font-size:11px;font-weight:600" id="t-name">Мөнхбат Э.</div>
+    <div style="font-size:9px;color:var(--m);margin-top:1px">Бизнес план авлаа · <span id="t-time">3 мин өмнө</span></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+// ① БАРАА ӨГӨГДӨЛ — Энд нэмж, засна
+//    img: Cloudinary URL оруулбал зураг харагдана
+//         Жишээ: 'https://res.cloudinary.com/CLOUD/image/upload/v123/product.jpg'
+//         Хоосон '' үлдээвэл emoji харагдана (fallback)
+//    emoji: img байхгүй үед харагдах emoji
+// ══════════════════════════════════════════
+const PRODUCTS = [
+  {
+    id: 'garage',
+    name: 'Эвхэгддэг Гараж',
+    nameEm: 'Эвхэгддэг <em>Гараж</em>',
+    cat: 'auto',
+    catLabel: '🚗 Авто',
+    emoji: '🏠',
+    img: '', // ← Cloudinary URL: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/v.../garage.jpg'
+    badges: ['wow','new'],
+    marginRange: '39–44%',
+    buyPrice: '¥320+',
+    install: '20 мин',
+    rating: '★ 4.9',
+    desc: 'Автомашинаа цас, бороо, шороо, халуун нарнаас хамгаалах боломжтой эвхэгддэг портатив гараж. 20 минутад суурилуулж, хэрэглэхгүй үед хавтгайрч хадгалагдана. Монголын хатуу уур амьсгалд зориулагдсан.',
+    calcSell: 380000,
+    calcCost: 154000,
+    calcShipping: 42000,
+    calcOther: 25000,
+    demandData: [88, 82, 60, 38, 22, 18, 15, 20, 35, 65, 82, 90],
+    saturation: 12,
+    satStores: 3,
+    targetAudience: {
+      interests: [
+        {name: 'Автомашин эзэмшигчид', size: '480K'},
+        {name: 'Гараж, засвар үйлчилгээ', size: '210K'},
+        {name: 'Хашаа байшин', size: '340K'},
+        {name: 'SUV, пикап эзэмшигчид', size: '155K'},
+      ],
+      gender: 'Эрэгтэй',
+      age: '28–55',
+      totalAudience: '580K',
+    },
+    complements: [
+      {name: 'Машины халхавч', cost: '₮35,000', emoji: '🛡️', where: '1688.com'},
+      {name: 'Машины цөс угаалтуур', cost: '₮12,000', emoji: '🧽', where: '1688.com'},
+      {name: 'Тоос шингэдэг мат', cost: '₮18,000', emoji: '🟫', where: 'Taobao'},
+      {name: 'Машины гэрлийн буфер', cost: '₮22,000', emoji: '💡', where: '1688.com'},
+      {name: 'Хүрдний түгжээ', cost: '₮15,000', emoji: '🔒', where: 'Taobao'},
+      {name: 'Машины цахилгаан насос', cost: '₮28,000', emoji: '⚡', where: '1688.com'},
+    ],
+    reviews: [
+      {stars:5, text:'Маш амар суурилдаг, манай Prado хэмжиж бүрэн ороод ирлаа. Бодоод байсан жилийн дараа л авлаа гэж харамсаж байна.', author:'Amazon хэрэглэгч'},
+      {stars:5, text:'Хагас жилийн өвлийн турш ашигласан. Цас, манан, мөс — машин бараг угаах шаардлага гарсангүй. Үнэ цэнийн харьцаа гайхалтай.', author:'Amazon хэрэглэгч'},
+      {stars:4, text:'Суурилуулахад арай хоёр хүн байвал дээр. Нэгээр ч болно гэж заавар хэлдэг ч 2 хүн илүү хурдан. Чанар маш сайн.', author:'Amazon хэрэглэгч'},
+    ],
+    influencers: [],
+    suppliers: [
+      {
+        name: 'Supplier A ✓',
+        badge: '★ Зөвлөмжтэй',
+        badgeColor: 'var(--a)',
+        rows: [
+          ['Платформ','1688.com (Alibaba)'],
+          ['Авах үнэ (1 ш)','¥320 (~₮154,000)','o'],
+          ['10+ ш авбал','¥280/ш (~₮135,000)','g'],
+          ['Хүргэлт','7–14 хоног'],
+          ['MOQ','1 ширхэгээс'],
+          ['Хэмжээ','S / M / L','g'],
+          ['Үнэлгээ','4.9/5.0 (2.3K+ борлуулалт)','g'],
+        ],
+        link: 'https://1688.com', // ← Жинхэнэ линкээр солих
+        linkLabel: '1688 линк нээх',
+      },
+      {
+        name: 'Supplier B',
+        badge: 'Нөөц сонголт',
+        badgeColor: 'var(--m)',
+        rows: [
+          ['Платформ','Taobao.com'],
+          ['Авах үнэ (1 ш)','¥365 (~₮176,000)','o'],
+          ['10+ ш авбал','¥330/ш (~₮159,000)'],
+          ['Хүргэлт','10–20 хоног'],
+          ['MOQ','1 ширхэгээс'],
+          ['Хэмжээ','S / M (2 сонголт)'],
+          ['Үнэлгээ','4.7/5.0'],
+        ],
+        link: 'https://taobao.com',
+        linkLabel: 'Taobao линк нээх',
+      }
+    ],
+    supNote: '💡 <strong>1688 яагаад дээр вэ?</strong> Үйлдвэрлэгчдэд шууд зориулсан B2B платформ — Taobao-оос 10–20% хямд.',
+    margin: {
+      sell: '₮380,000',
+      rows: [
+        ['Авах үнэ (Supplier A)','−₮154,000'],
+        ['Тээврийн зардал','−₮42,000'],
+        ['Дотоод хүргэлт','−₮8,000'],
+        ['Зар сурталчилгаа','−₮15,000'],
+        ['Бусад зардал','−₮10,000'],
+      ],
+      profit: '₮151,000',
+      pct: '39%',
+    },
+    marginNote: '💡 <strong>10 ш захиалбал:</strong> ашиг <strong>₮170,000/ш</strong> болно. <strong>Сард 5 зарвал:</strong> ≈ <strong>₮755,000</strong>',
+    hooks: [
+      {num:'01',tag:'WOW factor',ttl:'Нээгдэж хаагдах процесс',desc:'Time-lapse-аар харуул. Машин ороод шингэн мэт хаагдана.',text:'"Монголд байхгүй зүйл — манай хашааны машин яг ингэж хадгалагдана болоо"'},
+      {num:'02',tag:'Асуудал → Шийдэл',ttl:'Өвлийн хамгаалалт',desc:'Цасанд хучигдсан vs гаражтай машин. 6 сарын өвөлд хамааралтай.',text:'"Цас, салхи, хулгай — манай машин аль нэгт нь санаа зоволгүй болоо. Яаж?"'},
+      {num:'03',tag:'Суурилуулалт',ttl:'20 минутын суурилуулалт',desc:'Бодит суурилуулалтыг 60 сек болгон compress хий.',text:'"Ганцаараа 20 минутад суурилуулав — зааварчилгаа ч биш, үнэн"'},
+    ],
+    risks: [
+      {g:true,ico:'✅',ttl:'Монголд өрсөлдөгч байхгүй',desc:'First mover advantage — одоо л эхлэх цаг.'},
+      {g:true,ico:'✅',ttl:'Өвлийн эрэлт өндөр',desc:'6+ сарын өвөл — машинаа хамгаалах хэрэгцээ их.'},
+      {g:false,ico:'⚠️',ttl:'Тээврийн зардал өндөр',desc:'3+ ш нэг удаа авбал unit cost буурна.'},
+      {g:false,ico:'⚠️',ttl:'Орон зай хэрэгтэй',desc:'Зорилтот: хашаатай айл. Орон сууц тохиромжгүй.'},
+    ],
+    launch: {
+      budget: [
+        {ico:'📦',name:'Эхний захиалга (3 ш)',note:'Supplier A · S/M/L 1ш тус бүр',cost:'₮462,000',type:'must'},
+        {ico:'🚚',name:'Тээврийн зардал (3 ш)',note:'Агуулахаас Монгол хүртэл',cost:'₮126,000',type:'must'},
+        {ico:'🏷️',name:'Брэнд наклейка (100 ш)',note:'Монголд print хийлгэх — Printlab, Canprint',cost:'₮15,000',type:'opt'},
+        {ico:'📱',name:'Facebook/Instagram зар',note:'Эхний 2 долоо хоногт',cost:'₮20,000',type:'must'},
+        {ico:'🫧',name:'Хамгаалах хөөс (10 ш)',note:'Нарантуул зах — 2-р блок',cost:'₮8,000',type:'opt'},
+      ],
+      budgetNote:'Нийт эхлэх зардал: <strong>₮631,000</strong> · 3 ш зарвал → ашиг <strong>₮453,000</strong>. Зардал 3 дахь зарагдалттай нөхөгдөнө.',
+      steps: [
+        {n:'01',ico:'🔗',ttl:'1688-с 3 ш захиал',desc:'Supplier A линкээр S/M/L 1ш тус бүр захиал. Монголын тээврийн агентаар (Azan, Mongol Post) илгээ.'},
+        {n:'02',ico:'📸',ttl:'Ирмэгц суурилуулж видео ав',desc:'Ирсэн өдрөө суурилуулж time-lapse бичлэг хий. Хаагдах процессыг тодорхой харуул — энэ л эхний viral контент.'},
+        {n:'03',ico:'📱',ttl:'Instagram + Facebook хуудас нээ',desc:'Нэр санаа: "GarageShop.mn", "AutoGarage.mn". Bio: "Монголд анхны эвхэгддэг гараж 🏠"'},
+        {n:'04',ico:'🎬',ttl:'3 reel видео тавь',desc:'Hook текстүүдийг ашиглан суурилуулалт, өвлийн хамгаалалт, хаагдах процессыг харуул. Монгол субтитр нэм.'},
+        {n:'05',ico:'💬',ttl:'Facebook бүлгүүдэд зарлал тавь',desc:'"Зарна" бүлэг, "Машин авто клуб", "Хашаа байшин" бүлгүүдэд үнэ, хэмжээ, холбоо барихыг оруулан тав.'},
+        {n:'06',ico:'💳',ttl:'QPay / bank QR бэлд',desc:'QPay QR код хэвлэж бэлд. Захиалга ирмэгц урьдчилгаа авч, 3–5 хоногт хүргэнэ гэж тохиролц.'},
+        {n:'07',ico:'⭐',ttl:'Эхний 3 борлуулалтаас review ав',desc:'Суурилуулсны дараа зураг/видео feedback хүс — энэ нь дараагийн 10 борлуулалтын хамгийн хүчтэй proof.'},
+      ],
+      channels: [
+        {name:'Instagram Reels',tag:'Хурдан өсөлт',desc:'Видео viral болвол нэг хоногт 10+ захиалга ирж болно.'},
+        {name:'Facebook Зарна бүлэг',tag:'Тогтвортой',desc:'Монголд хамгийн идэвхтэй бүлэг — 100K+ гишүүн, хямд зар.'},
+        {name:'Хувийн мессеж',tag:'0 зардал',desc:'Хашаатай найз, танилдаа мессеж — эхний борлуулалтын 70% ингэж гарна.'},
+      ],
+      packaging: {needed:false, note:'Том бараа тул тусгай савлагаа шаардлагагүй. Supplier-ийн оригинал хайрцаг л хангалттай. Брэнд наклейка хийвэл илүү мэргэжлийн харагдана.'},
+      timeline: [
+        {week:'7–14 хоног',event:'Бараа Монголд ирнэ'},
+        {week:'14–21 хоног',event:'Эхний борлуулалт'},
+        {week:'30 хоног',event:'Зардал нөхөгдөнө'},
+        {week:'2 сар',event:'Тогтмол захиалга'},
+      ],
+    },
+  },
+  // ══ ЖИШЭЭ БАРАА 2 — Устгаад жинхэнэ бараагаар солих ══
+  {
+    id: 'neck-massager',
+    name: 'Хүзүүний массажер',
+    nameEm: 'Хүзүүний <em>Массажер</em>',
+    cat: 'health',
+    catLabel: '💪 Эрүүл мэнд',
+    emoji: '💆',
+    img: '', // ← Cloudinary URL оруулах
+    badges: ['hot'],
+    marginRange: '55–65%',
+    buyPrice: '¥85+',
+    install: '—',
+    rating: '★ 4.7',
+    desc: 'EMS болон дулааны технологи ашигласан портатив хүзүүний массажер. Оффист, унтахын өмнө ашиглах боломжтой. Хүзүү, мөрний өвдөлтийг тайлж, цусны эргэлтийг сайжруулна.',
+    calcSell: 120000,
+    calcCost: 41000,
+    calcShipping: 8000,
+    calcOther: 17000,
+    demandData: [55, 58, 60, 65, 68, 70, 72, 70, 68, 65, 62, 58],
+    saturation: 35,
+    satStores: 8,
+    targetAudience: {
+      interests: [
+        {name: 'Эрүүл мэнд, фитнесс', size: '890K'},
+        {name: 'Оффис ажилтан', size: '420K'},
+        {name: 'Спорт, эрүүл мэнд', size: '650K'},
+        {name: 'Бэлэг, онцгой тохиолдол', size: '380K'},
+      ],
+      gender: 'Бүх хүйс',
+      age: '22–50',
+      totalAudience: '1.2M',
+    },
+    complements: [
+      {name: 'Нурууны бэлхүүс тулгуур', cost: '₮28,000', emoji: '🦴', where: '1688.com'},
+      {name: 'Нүдний массажер', cost: '₮45,000', emoji: '👁️', where: 'Taobao'},
+      {name: 'Дулааны нурууны бүс', cost: '₮22,000', emoji: '🌡️', where: '1688.com'},
+      {name: 'Хурууны бөгж массажер', cost: '₮8,000', emoji: '💍', where: '1688.com'},
+      {name: 'Ширээний эрготик дэр', cost: '₮35,000', emoji: '🪑', where: 'Taobao'},
+    ],
+    reviews: [
+      {stars:5, text:'Ажлын дараа хүзүүг маань гарнаасаа суллаж өгдөг. 3 долоо хоног хэрэглэсэн — одоо ажлын ширээнийхээ дагалдагч боллоо.', author:'Amazon хэрэглэгч'},
+      {stars:5, text:'Дулааны горим бас нэмсэн чинь хоёр дахин сайн мэдрэгдэж байна. Эхнэртэйгээ хуваан хэрэглэж байна. Маш хоёулаа таалагдлаа.', author:'Amazon хэрэглэгч'},
+      {stars:4, text:'Зарим горим арай чанга ч юм шиг санагддаг. Харин эхлэх горимоор эхэлж суралцавал маш тааламжтай. Үнэдээ гарна.', author:'Amazon хэрэглэгч'},
+    ],
+    influencers: [],
+    suppliers: [
+      {
+        name: 'Supplier A ✓',
+        badge: '★ Зөвлөмжтэй',
+        badgeColor: 'var(--a)',
+        rows: [
+          ['Платформ','1688.com (Alibaba)'],
+          ['Авах үнэ (1 ш)','¥85 (~₮41,000)','o'],
+          ['20+ ш авбал','¥72/ш (~₮35,000)','g'],
+          ['Хүргэлт','7–14 хоног'],
+          ['MOQ','5 ширхэгээс'],
+          ['Өнгө','5 өнгө','g'],
+          ['Үнэлгээ','4.8/5.0','g'],
+        ],
+        link: 'https://1688.com',
+        linkLabel: '1688 линк нээх',
+      }
+    ],
+    supNote: '💡 Хүзүүний өвдөлт Монголд маш түгээмэл — оффис ажилтан, жолооч чиглэлд маш сайн.',
+    margin: {
+      sell: '₮120,000',
+      rows: [
+        ['Авах үнэ (Supplier A)','−₮41,000'],
+        ['Тээврийн зардал','−₮8,000'],
+        ['Дотоод хүргэлт','−₮5,000'],
+        ['Зар сурталчилгаа','−₮12,000'],
+        ['Бусад зардал','−₮2,000'],
+      ],
+      profit: '₮52,000',
+      pct: '43%',
+    },
+    marginNote: '💡 <strong>20 ш захиалбал:</strong> ашиг <strong>₮58,000/ш</strong> болно. <strong>Сард 15 зарвал:</strong> ≈ <strong>₮870,000</strong>',
+    hooks: [
+      {num:'01',tag:'WOW factor',ttl:'Хүзүүг ингэж мэдрэлийг нь тайлна',desc:'Хэрэглэж байгаа хүний нүүр царайг харуул.',text:'"Оффист 8 цаг сууснаас хойш хүзүү нь ийм болдог байжээ — шийдэл нь ийм энгийн байлаа"'},
+      {num:'02',tag:'Мэдрэмж',ttl:'Анхны хэрэглээ',desc:'Нэг хэрэглэж буй хүний мэдрэмжийг дүрс, дуугаар харуул.',text:'"Хоёрдугаар минутаас хүзүү нь тайлагдаад эхлэв — ийм зүйл байдаг юм уу"'},
+      {num:'03',tag:'Бэлэг санаа',ttl:'Бэлэг болгон',desc:'Эцэг эхдээ, хамтрагчдаа гэсэн framing хийгээд харуул.',text:'"Ажил их хийдэг хүндээ өгөх хамгийн практик бэлэг — ₮120,000"'},
+    ],
+    risks: [
+      {g:true,ico:'✅',ttl:'Өндөр эрэлт',desc:'Хүзүүний өвдөлт Монголд маш нийтлэг асуудал.'},
+      {g:true,ico:'✅',ttl:'Жижиг хайрцаг',desc:'Тээвэр хямд, хадгалах ч хялбар.'},
+      {g:false,ico:'⚠️',ttl:'Өрсөлдөгч бий',desc:'Dulex гэх мэт брэнд зарж эхэлсэн — үнэ, чанар дээр ялгааг тодруул.'},
+      {g:true,ico:'✅',ttl:'Repeat purchase',desc:'Хэрэглэгч таалагдвал найздаа зөвлөдөг.'},
+    ],
+    launch: {
+      budget: [
+        {ico:'📦',name:'Эхний захиалга (20 ш)',note:'Supplier A · 20ш MOQ',cost:'₮700,000',type:'must'},
+        {ico:'🚚',name:'Тээврийн зардал',note:'Жижиг бараа — килограммаар',cost:'₮30,000',type:'must'},
+        {ico:'📦',name:'Хайрцаг (20 ш)',note:'Нарантуул зах эсвэл Aliexpress',cost:'₮16,000',type:'must'},
+        {ico:'🏷️',name:'Брэнд наклейка + card (50 ш)',note:'Canprint.mn — 1 өдрийн ажил',cost:'₮12,000',type:'opt'},
+        {ico:'📱',name:'Instagram/TikTok зар',note:'Эхний 2 долоо хоногт',cost:'₮25,000',type:'must'},
+      ],
+      budgetNote:'Нийт эхлэх зардал: <strong>₮783,000</strong> · 15 ш зарвал → бүрэн нөхөгдөнө. Сард 30 зарвал → ашиг <strong>₮1,560,000</strong>.',
+      steps: [
+        {n:'01',ico:'🔗',ttl:'1688-с 20 ш захиал',desc:'Supplier A 20ш захиалбал ¥72/ш болно. Монголын тээврийн агентаар илгээ — 7–14 хоногт ирнэ.'},
+        {n:'02',ico:'📦',ttl:'Савлагаагаа бэлд',desc:'Нарантуул эсвэл Aliexpress-с хайрцаг захиал. Canprint-с брэнд наклейка, "Баярлалаа" card хэвлүүл.'},
+        {n:'03',ico:'📱',ttl:'TikTok + Instagram account нээ',desc:'Нэр санаа: "MassageMN", "ComfortMN". Профайл зургаар бараагаа ашигла.'},
+        {n:'04',ico:'🎬',ttl:'Хэрэглэж байгаа видео хий',desc:'Найзаараа хэрэглүүлж мэдрэмжийг нь бичлэглэ. "8 цаг оффист сууснаас хойш" framing хийгээд харуул.'},
+        {n:'05',ico:'💬',ttl:'Оффисын бүлгүүдэд пост тав',desc:'"Компанийн HR бүлэг", "Оффис ажилтан" Facebook бүлгүүдэд — хамтрагч, ажилчдын бэлэг болгон frame хий.'},
+        {n:'06',ico:'🎁',ttl:'Бэлэг багц хий',desc:'"Бэлэг боодол" option нэм — Наурыз, төрсөн өдрийн бэлгэнд тохиромжтой. ₮5,000-р бэлэглэлт сонголт нэм.'},
+        {n:'07',ico:'⭐',ttl:'Review campaign',desc:'Эхний 5 хэрэглэгчид "хэрэглэж байгаа зургаа илгээгэд 10% хөнгөлөлт" өгч, proof цуглуул.'},
+      ],
+      channels: [
+        {name:'TikTok / Instagram Reels',tag:'Хамгийн хурдан',desc:'Хүзүүг тайлж буй мэдрэмжийн видео viral болно — эрүүл мэндийн контент сайн ажилладаг.'},
+        {name:'Facebook Marketplace',tag:'Шууд худалдаа',desc:'Монголд хамгийн идэвхтэй онлайн зах — үнэ, зураг, тайлбартай зарлал тав.'},
+        {name:'Хувийн мессеж / WOM',tag:'Repeat purchase',desc:'Нэг хэрэглэгч таалагдвал 2–3 найздаа зөвлөнө — органик өсөлтийн эх сурвалж.'},
+      ],
+      packaging: {
+        needed:true,
+        items:[
+          {name:'Хайрцаг (medium)',where:'Нарантуул зах — 2-р блок, баруун хэсэг',price:'₮700–900/ш'},
+          {name:'Брэнд наклейка (A6)',where:'Canprint.mn / Printlab.mn — онлайн захиалга',price:'₮150–200/ш (50ш-аас)'},
+          {name:'"Баярлалаа" card',where:'Canprint.mn — хэвлэмэл бизнес карт',price:'₮50–80/ш (100ш-аас)'},
+          {name:'Нимгэн хөөс хамгаалалт',where:'Нарантуул зах — 1-р блок',price:'₮200–300/ш'},
+        ],
+        note:'Нийт савлагааны зардал бараа тус бүрт: <strong>₮1,100–1,500</strong>',
+      },
+      timeline: [
+        {week:'7–14 хоног',event:'Бараа + савлагаа ирнэ'},
+        {week:'3 дахь долоо хоног',event:'Эхний 5 борлуулалт'},
+        {week:'6 дахь долоо хоног',event:'Break-even'},
+        {week:'2 сар',event:'Тогтмол орлого'},
+      ],
+    },
+  },
+  // ══ ЖИШЭЭ БАРАА 3 ══
+  {
+    id: 'led-mirror',
+    name: 'LED толь',
+    nameEm: 'LED <em>Толь</em>',
+    cat: 'beauty',
+    catLabel: '✨ Гоо сайхан',
+    emoji: '🪞',
+    img: '', // ← Cloudinary URL оруулах
+    badges: ['new'],
+    marginRange: '50–60%',
+    buyPrice: '¥120+',
+    install: '5 мин',
+    rating: '★ 4.8',
+    desc: 'Makeup, гоо сайхны процессыг мэргэжлийн түвшинд хийх боломж олгох гэрэлтэй толь. 3 өнгийн гэрлийн тохиргоо, тод гэрэл, USB цэнэглэлттэй. TikTok-т вирал болж байгаа бараа.',
+    calcSell: 180000,
+    calcCost: 58000,
+    calcShipping: 12000,
+    calcOther: 22000,
+    demandData: [45, 50, 62, 70, 68, 65, 60, 62, 68, 72, 75, 55],
+    saturation: 22,
+    satStores: 5,
+    targetAudience: {
+      interests: [
+        {name: 'Гоо сайхан, арьс арчилгаа', size: '720K'},
+        {name: 'Makeup, гоо засал', size: '540K'},
+        {name: 'Lifestyle, тансаг амьдрал', size: '380K'},
+        {name: 'TikTok, Instagram контент', size: '290K'},
+      ],
+      gender: 'Эмэгтэй',
+      age: '18–38',
+      totalAudience: '850K',
+    },
+    complements: [
+      {name: 'Makeup тавиур, зохион байгуулагч', cost: '₮22,000', emoji: '💄', where: '1688.com'},
+      {name: 'Facial roller, Gua sha', cost: '₮15,000', emoji: '🪨', where: 'Taobao'},
+      {name: 'Ring light дагалдах тулгуур', cost: '₮18,000', emoji: '💡', where: '1688.com'},
+      {name: 'Арьс арчилгааны иж бүрдэл', cost: '₮45,000', emoji: '🧴', where: '1688.com'},
+      {name: 'Nail art тоног хэрэгсэл', cost: '₮25,000', emoji: '💅', where: 'Taobao'},
+    ],
+    reviews: [
+      {stars:5, text:'Өрөөний гэрэл унтарсан ч хамаагүй, энэ толийн гэрлээр makeup хийгдэж байна. Гурван өнгийн тохиргоо бас хэрэгтэй байдаг болж.', author:'Amazon хэрэглэгч'},
+      {stars:5, text:'Үнэдээ гарсан. Ажил дээрх найзуудад зөвлөсөн — гуравдугаарт нь захиалуулсан. Нааш нь байрлуулаад ярих нь тохиромжтой.', author:'Amazon хэрэглэгч'},
+      {stars:5, text:'TikTok content хийдэг хүний хувьд авч болох хамгийн сайн хэрэгсэл. Гэрэл нь маш жигд, камер хэтэрхий шар харагдуулдаггүй.', author:'Amazon хэрэглэгч'},
+    ],
+    influencers: [],
+    suppliers: [
+      {
+        name: 'Supplier A ✓',
+        badge: '★ Зөвлөмжтэй',
+        badgeColor: 'var(--a)',
+        rows: [
+          ['Платформ','1688.com (Alibaba)'],
+          ['Авах үнэ (1 ш)','¥120 (~₮58,000)','o'],
+          ['10+ ш авбал','¥99/ш (~₮48,000)','g'],
+          ['Хүргэлт','7–10 хоног'],
+          ['MOQ','1 ширхэгээс'],
+          ['Хэмжээ','3 хэмжээ','g'],
+          ['Үнэлгээ','4.8/5.0','g'],
+        ],
+        link: 'https://1688.com',
+        linkLabel: '1688 линк нээх',
+      }
+    ],
+    supNote: '💡 TikTok дээр viral болсон бараа — Монголд content creator-уудад маш сайн зарагдана.',
+    margin: {
+      sell: '₮150,000',
+      rows: [
+        ['Авах үнэ','−₮58,000'],
+        ['Тээвэр','−₮10,000'],
+        ['Хүргэлт','−₮5,000'],
+        ['Зар','−₮10,000'],
+        ['Бусад','−₮2,000'],
+      ],
+      profit: '₮65,000',
+      pct: '43%',
+    },
+    marginNote: '💡 <strong>Сард 20 зарвал:</strong> ≈ <strong>₮1,300,000</strong> цэвэр орлого.',
+    hooks: [
+      {num:'01',tag:'WOW factor',ttl:'Гэрэл асаах',desc:'Харанхуй өрөөнд LED гэрэл асах мөчийг харуул.',text:'"Content creator-уудын студийн гэрэл гэж байсан, одоо хэн ч ийм толь авч болно"'},
+      {num:'02',tag:'Хэрэглээ',ttl:'Makeup хийж байгаа',desc:'Makeup process-ийг LED толиор харуул — гэрэл нь нүүрнийг тод болгодог.',text:'"Яагаад makeup заримд хэтэрхий хүнд харагддаг юм бол — буруу гэрэлтэй байсан"'},
+      {num:'03',tag:'Бэлэг',ttl:'Охид, эгч нарт',desc:'Бэлэг болгон wrap хийж харуул.',text:'"Охидод өгөх хамгийн практик бэлэг — ₮150,000"'},
+    ],
+    risks: [
+      {g:true,ico:'✅',ttl:'TikTok viral бараа',desc:'Олон улсад аль хэдийн trend болсон.'},
+      {g:false,ico:'⚠️',ttl:'Цахилгаан хамааралтай',desc:'Баттерейны насжилт асуудал гарч болно — return policy бэлд.'},
+      {g:true,ico:'✅',ttl:'Content friendly',desc:'Зурж, бичлэглэж харуулахад маш хялбар.'},
+      {g:false,ico:'⚠️',ttl:'Өрсөлдөгч',desc:'Гоо сайхны дэлгүүрүүд зарж эхэлсэн байж болно.'},
+    ],
+    launch: {
+      budget: [
+        {ico:'📦',name:'Эхний захиалга (10 ш)',note:'Supplier A · 10ш',cost:'₮480,000',type:'must'},
+        {ico:'🚚',name:'Тээврийн зардал',note:'Дунд хэмжээ — агент тээвэр',cost:'₮40,000',type:'must'},
+        {ico:'📦',name:'Хайрцаг / савлагаа (10 ш)',note:'Нарантуул зах',cost:'₮15,000',type:'must'},
+        {ico:'🏷️',name:'Брэнд наклейка + card',note:'Canprint.mn',cost:'₮12,000',type:'opt'},
+        {ico:'📱',name:'Instagram зар',note:'Гоо сайхны target audience',cost:'₮30,000',type:'must'},
+      ],
+      budgetNote:'Нийт эхлэх зардал: <strong>₮577,000</strong> · 9 ш зарвал → нөхөгдөнө. Сард 20 зарвал → ашиг <strong>₮1,300,000</strong>.',
+      steps: [
+        {n:'01',ico:'🔗',ttl:'1688-с 10 ш захиал',desc:'Supplier A-с 10ш авбал нэгж үнэ ₮48,000 болно. Хурдан агентаар 7–10 хоногт ирнэ.'},
+        {n:'02',ico:'📦',ttl:'Брэнд савлагаа бэлд',desc:'Нарантуул-с хайрцаг, Canprint-с наклейка. "Хүргэлтийн хайрцаг нь ч гоё байна" гэсэн мэдрэмж бий болго.'},
+        {n:'03',ico:'📱',ttl:'Instagram "Гоо сайхан" нэртэй аккаунт нээ',desc:'Нэр санаа: "GlowMirror.mn", "LightMN". Хиймэл гэрлийн дор makeup хийж буй видео profile pic болго.'},
+        {n:'04',ico:'🎬',ttl:'"Харанхуй → Гэрэлтэй" видео хий',desc:'Өрөөний гэрлийг унтраагаад LED толийг асаа — энэ л эхний viral момент. 15 сек болгон edit хий.'},
+        {n:'05',ico:'👩',ttl:'Beauty blogger / influencer-тай хамтар',desc:'Монголын жижиг beauty blogger (5K–30K follower) нарт бараагаа үнэгүй илгээж review авна — хамгийн хямд зар.'},
+        {n:'06',ico:'🛍️',ttl:'Story Poll + DM trigger ашигла',desc:'"Чи ийм толь хэрэгтэй юу?" story poll хий. "Тийм" гэсэн хүнд авто DM илгээдэг болго.'},
+        {n:'07',ico:'🎁',ttl:'Бэлэг bundle хий',desc:'LED толь + nail art kit эсвэл LED толь + skincare гэх мэт bundle хийж үнийг өсгө — AOV нэмэгдэнэ.'},
+      ],
+      channels: [
+        {name:'Instagram / TikTok',tag:'Мэдрэмжийн видео',desc:'Гоо сайхны бараа Instagram-д хамгийн сайн зарагддаг — influencer + paid реклам хослол.'},
+        {name:'Beauty blogger хамтын ажиллагаа',tag:'Trust building',desc:'1 influencer review = ₮50,000-р зарлалаас 3 дахин үр дүнтэй.'},
+        {name:'Facebook Гоо сайхан бүлэг',tag:'Organic',desc:'"Эмэгтэйчүүдийн клуб", "Гоо сайхан" бүлгүүдэд before/after зураг тавь.'},
+      ],
+      packaging: {
+        needed:true,
+        items:[
+          {name:'Хайрцаг (дунд)',where:'Нарантуул зах — 2-р блок',price:'₮800–1,200/ш'},
+          {name:'Брэнд наклейка (A5)',where:'Canprint.mn / Printlab.mn',price:'₮180–250/ш'},
+          {name:'"Баярлалаа" card + хэрэглэх заавар',where:'Canprint.mn — 2 талт хэвлэл',price:'₮60–90/ш'},
+          {name:'Tissue paper / crepe wrap',where:'Нарантуул зах — 1-р блок',price:'₮100–150/ш'},
+        ],
+        note:'Нийт савлагааны зардал бараа тус бүрт: <strong>₮1,200–1,700</strong>',
+      },
+      timeline: [
+        {week:'7–10 хоног',event:'Бараа ирнэ'},
+        {week:'2 дахь долоо хоног',event:'Influencer review гарна'},
+        {week:'3 дахь долоо хоног',event:'Эхний 10 борлуулалт'},
+        {week:'45 хоног',event:'Break-even'},
+      ],
+    },
+  },
+];
+
+// ══════════════════════════════════════════
+// ② CONFIG
+// ══════════════════════════════════════════
+const SALT = 'PD2026MN';
+const BANK = '5018953118';
+
+// ══════════════════════════════════════════
+// ③ STATE
+// ══════════════════════════════════════════
+
+// ── Safe URL helper (about:srcdoc 환경에서 SecurityError 방지)
+function safeReplaceState(url) {
+  try { history.replaceState(null, '', url); } catch(e) {}
+}
+function safeGetParam(key) {
+  try { return new URLSearchParams(window.location.search).get(key); } catch(e) { return null; }
+}
+
+let currentProduct = null;
+let currentCat = 'all';
+
+// ══════════════════════════════════════════
+// ④ CHECKSUM (admin.html-тэй ижил алгоритм)
+// ══════════════════════════════════════════
+function validateCode(code, name, productId) {
+  const parts = code.trim().toUpperCase().split('-');
+  if (parts.length !== 4 || parts[0] !== 'PD') return {ok:false, msg:'Код буруу байна'};
+  const uid = parts[1], exB36 = parts[2], ckStr = parts[3];
+  const expiry = parseInt(exB36, 36);
+  if (isNaN(expiry)) return {ok:false, msg:'Код буруу байна'};
+  if (expiry < Date.now()) return {ok:false, msg:'Кодын хугацаа дууссан байна'};
+  const normName = name.trim().toLowerCase().replace(/\s+/g,'');
+  const raw = uid + exB36 + SALT + productId + normName;
+  let ck = 0;
+  for (let i = 0; i < raw.length; i++) ck = (ck * 31 + raw.charCodeAt(i)) & 0xFFFFFF;
+  const expected = ck.toString(36).toUpperCase().padStart(5,'0');
+  if (ckStr === expected) return {ok:true, expiry};
+  return {ok:false, msg:'Нэр эсвэл код буруу байна'};
+}
+
+// ══════════════════════════════════════════
+// ⑤ LOCALSTORAGE helpers
+// ══════════════════════════════════════════
+function getLsKey(pid) { return 'pd_cat_' + pid; }
+function isUnlocked(pid) {
+  try {
+    const d = JSON.parse(localStorage.getItem(getLsKey(pid)));
+    return d && d.expiry > Date.now();
+  } catch(e) { return false; }
+}
+function saveUnlock(pid, code, name, expiry) {
+  localStorage.setItem(getLsKey(pid), JSON.stringify({code, name, expiry}));
+}
+
+// ══════════════════════════════════════════
+// ⑥ RENDER CATALOG
+// ══════════════════════════════════════════
+function renderCatalog(cat) {
+  const grid = document.getElementById('catalog-grid');
+  const visible = PRODUCTS.filter(p => cat === 'all' || p.cat === cat);
+  document.getElementById('f-count').textContent = visible.length + ' бараа';
+  document.getElementById('total-count').innerHTML = '<span>' + PRODUCTS.length + '</span>';
+
+  const catGradients = {
+    auto:   { bg: 'linear-gradient(150deg,#050c18 0%,#0a1428 100%)', glow: 'rgba(80,150,255,0.5)' },
+    home:   { bg: 'linear-gradient(150deg,#0e0b06 0%,#1a1106 100%)', glow: 'rgba(255,155,40,0.45)' },
+    beauty: { bg: 'linear-gradient(150deg,#110608 0%,#1a0812 100%)', glow: 'rgba(210,90,255,0.4)' },
+    health: { bg: 'linear-gradient(150deg,#050e07 0%,#081808 100%)', glow: 'rgba(60,210,90,0.4)' },
+    kids:   { bg: 'linear-gradient(150deg,#09070f 0%,#110918 100%)', glow: 'rgba(200,150,255,0.4)' },
+  };
+
+  if (visible.length === 0) {
+    grid.innerHTML = '<div class="empty-state">Энэ ангилалд одоогоор бараа байхгүй байна.</div>';
+    return;
+  }
+
+  grid.innerHTML = PRODUCTS.map(p => {
+    const unlocked = isUnlocked(p.id);
+    const hidden = (cat !== 'all' && p.cat !== cat) ? 'hidden' : '';
+    const badgeHtml = p.badges.map(b => {
+      const labels = {wow:'⚡ Монголд ороогүй', new:'Шинэ', hot:'🔥 Эрэлтэй'};
+      return `<div class="badge ${b}">${labels[b]||b}</div>`;
+    }).join('');
+    const cg = catGradients[p.cat] || { bg: 'linear-gradient(150deg,#0d0d12 0%,#13131a 100%)', glow: 'rgba(200,255,0,0.3)' };
+    const imgHtml = p.img
+      ? `<img src="${p.img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .4s" onerror="this.style.display='none'">`
+      : `<div class="card-img-gradient">
+          <div class="card-img-glow" style="background:${cg.glow}"></div>
+          <div class="card-img-emoji-lg">${p.emoji}</div>
+        </div>`;
+    return `
+    <div class="prod-card ${hidden}" onclick="openModal('${p.id}')">
+      <div class="card-img" style="${!p.img ? 'background:'+cg.bg : ''}">
+        ${imgHtml}
+        <div class="card-badges">${badgeHtml}</div>
+        <div class="card-img-margin-pill">${p.marginRange}</div>
+        ${unlocked ? '<div class="unlocked-badge" style="display:block">✓ Нээгдсэн</div>' : ''}
+      </div>
+      <div class="card-body">
+        <div class="card-cat">${p.catLabel}</div>
+        <div class="card-name">${p.name}</div>
+        <div class="card-rating">${p.rating} · Авах үнэ ${p.buyPrice}</div>
+        <div class="card-meta">
+          <div>
+            <div class="card-margin">${p.marginRange}</div>
+            <div class="card-margin-lbl">Margin</div>
+          </div>
+          <div>${unlocked ? '<span style="color:var(--a);font-size:10px">✓ Нээгдсэн</span>' : '<span class="card-price">₮9,900</span>'}</div>
+        </div>
+      </div>
+      <div class="card-cta">${unlocked ? '✓ Дэлгэрэнгүй харах' : 'Дэлгэрэнгүй →'}</div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════
+// ⑦ FILTER
+// ══════════════════════════════════════════
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCatalog(cat);
+}
+
+// ══════════════════════════════════════════
+// ⑧ OPEN MODAL
+// ══════════════════════════════════════════
+function openModal(pid) {
+  const p = PRODUCTS.find(x => x.id === pid);
+  if (!p) return;
+  currentProduct = p;
+
+  // Already unlocked → go straight to full report view
+  if (isUnlocked(p.id)) {
+    showReportView(p);
+    return;
+  }
+
+  // Reset unlock inputs
+  const ni = document.getElementById('u-name');
+  const ci = document.getElementById('u-code');
+  ni.value = ''; ci.value = '';
+  ni.className = 'u-inp'; ci.className = 'u-inp';
+  const msg = document.getElementById('u-msg');
+  msg.className = 'u-msg'; msg.textContent = '';
+
+  // Fill locked state
+  document.getElementById('ml-cat').textContent = p.catLabel;
+  document.getElementById('ml-name').innerHTML = p.nameEm;
+  document.getElementById('mls-margin').textContent = p.marginRange;
+  document.getElementById('mls-buy').textContent = p.buyPrice;
+  document.getElementById('mls-install').textContent = p.install;
+  document.getElementById('mls-rating').textContent = p.rating;
+
+  // Badges
+  const badgeLabels = {wow:'⚡ Монголд ороогүй', new:'Шинэ', hot:'🔥 Эрэлтэй'};
+  document.getElementById('ml-badges').innerHTML = p.badges.map(b => `<div class="badge ${b}">${badgeLabels[b]||b}</div>`).join('');
+
+  // Image — Cloudinary URL эсвэл emoji fallback
+  const mlImgBox = document.getElementById('ml-img');
+  const ph = document.getElementById('ml-img-ph');
+  const imgEl = mlImgBox.querySelector('img.ml-dyn-img');
+  if (imgEl) imgEl.remove();
+  if (p.img) {
+    const img = document.createElement('img');
+    img.className = 'ml-dyn-img';
+    img.src = p.img; img.alt = p.name;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1';
+    img.onerror = function() {
+      this.remove();
+      ph.style.display = 'flex';
+      document.getElementById('ml-emoji').textContent = p.emoji;
+      document.getElementById('ml-img-lbl').textContent = p.name;
+    };
+    mlImgBox.insertBefore(img, ph);
+    ph.style.display = 'none';
+  } else {
+    const modalGradients = {
+      auto:   'linear-gradient(150deg,#050c18 0%,#0a1428 100%)',
+      home:   'linear-gradient(150deg,#0e0b06 0%,#1a1106 100%)',
+      beauty: 'linear-gradient(150deg,#110608 0%,#1a0812 100%)',
+      health: 'linear-gradient(150deg,#050e07 0%,#081808 100%)',
+      kids:   'linear-gradient(150deg,#09070f 0%,#110918 100%)',
+    };
+    const modalGlows = {
+      auto:'rgba(80,150,255,0.4)', home:'rgba(255,155,40,0.35)',
+      beauty:'rgba(210,90,255,0.35)', health:'rgba(60,210,90,0.35)', kids:'rgba(200,150,255,0.35)'
+    };
+    mlImgBox.style.background = modalGradients[p.cat] || 'linear-gradient(150deg,#0d0d12 0%,#13131a 100%)';
+    ph.style.display = 'flex';
+    document.getElementById('ml-emoji').style.fontSize = '64px';
+    document.getElementById('ml-emoji').textContent = p.emoji;
+    document.getElementById('ml-img-lbl').textContent = p.name;
+    // Add glow
+    let glowEl = mlImgBox.querySelector('.ml-emoji-glow');
+    if (!glowEl) { glowEl = document.createElement('div'); glowEl.className='ml-emoji-glow'; glowEl.style.cssText='position:absolute;width:140px;height:140px;border-radius:50%;filter:blur(30px);opacity:.45;top:50%;left:50%;transform:translate(-50%,-50%)'; mlImgBox.insertBefore(glowEl,ph); }
+    glowEl.style.background = modalGlows[p.cat] || 'rgba(200,255,0,0.25)';
+  }
+
+  // Payment ref
+  document.getElementById('pay-prod-name').textContent = p.name + ' — Бизнес план';
+  document.getElementById('pay-ref').textContent = 'ПЛАН-' + p.id.toUpperCase() + ' + нэр';
+
+  // Reset lock icons
+  for (let i=1;i<=5;i++) { const el=document.getElementById('li'+i); if(el){el.textContent='🔒'; el.style.color='';} }
+
+  document.getElementById('modal-locked').style.display = 'block';
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.classList.add('locked');
+
+  // URL param update
+try { const _u=new URL(window.location); _u.searchParams.set('id',pid); safeReplaceState(_u); } catch(e) {}
+}
+
+// ══════════════════════════════════════════
+// ⑨ SHOW REPORT VIEW (Tradelle-style)
+// ══════════════════════════════════════════
+let calcProductData = null;
+
+function showReportView(p) {
+  document.getElementById('modal-overlay').classList.remove('open');
+  calcProductData = p;
+  const rv = document.getElementById('report-view');
+
+  // Header labels
+  document.getElementById('rp-title').textContent = p.name;
+  document.getElementById('rp-prod-name').textContent = p.name;
+  document.getElementById('rp-prod-cat').textContent = p.catLabel;
+
+  // Sidebar thumbnail
+  const thumb = document.getElementById('rp-prod-thumb');
+  thumb.innerHTML = '';
+  if (p.img) {
+    const img = document.createElement('img'); img.src = p.img; img.alt = p.name;
+    img.onerror = () => { thumb.innerHTML = `<div class="rp-prod-thumb-emoji">${p.emoji}</div>`; };
+    thumb.appendChild(img);
+  } else {
+    thumb.innerHTML = `<div class="rp-prod-thumb-emoji">${p.emoji}</div>`;
+  }
+
+  // Expiry
+  try {
+    const stored = JSON.parse(localStorage.getItem('pd_cat_' + p.id) || '{}');
+    if (stored.expiry) {
+      document.getElementById('rp-expiry').innerHTML =
+        `Хэрэглэгч: <strong>${stored.name || '—'}</strong><br>Дуусах огноо:<br>${new Date(stored.expiry).toLocaleDateString('mn-MN')}`;
+    }
+  } catch(e) {}
+
+  // ── 01 OVERVIEW
+  document.getElementById('td-prod-name-big').innerHTML = p.nameEm;
+  document.getElementById('td-prod-desc').textContent = p.desc || '—';
+  // Image
+  const imgBox = document.getElementById('td-img-box');
+  const imgPh = document.getElementById('td-img-ph');
+  const existImg = imgBox.querySelector('img.td-dyn-img');
+  if (existImg) existImg.remove();
+  if (p.img) {
+    const img = document.createElement('img'); img.className='td-dyn-img';
+    img.src=p.img; img.alt=p.name; img.style.cssText='width:100%;height:100%;object-fit:cover;position:absolute;inset:0';
+    img.onerror = () => { img.remove(); imgPh.style.display='flex'; document.getElementById('td-emoji').textContent=p.emoji; };
+    imgBox.insertBefore(img, imgPh); imgPh.style.display='none';
+  } else {
+    imgPh.style.display='flex'; document.getElementById('td-emoji').textContent=p.emoji;
+    const catBgs = {auto:'linear-gradient(150deg,#050c18,#0a1428)',home:'linear-gradient(150deg,#0e0b06,#1a1106)',beauty:'linear-gradient(150deg,#110608,#1a0812)',health:'linear-gradient(150deg,#050e07,#081808)',kids:'linear-gradient(150deg,#09070f,#110918)'};
+    imgBox.style.background = catBgs[p.cat] || 'var(--s2)';
+  }
+  // 3 stat boxes
+  const netPerUnit = (p.calcSell||0) - (p.calcCost||0) - (p.calcShipping||0) - (p.calcOther||0);
+  document.getElementById('td-stat3').innerHTML = `
+    <div class="td-stat3-item"><div class="td-stat3-lbl">Авах үнэ</div><div class="td-stat3-val" style="color:var(--orange)">${fmtTug(p.calcCost||0)}</div></div>
+    <div class="td-stat3-item"><div class="td-stat3-lbl">Зарах үнэ</div><div class="td-stat3-val">${fmtTug(p.calcSell||0)}</div></div>
+    <div class="td-stat3-item"><div class="td-stat3-lbl">Ашиг нэг борлуулалтаас</div><div class="td-stat3-val" style="color:var(--a)">${fmtTug(netPerUnit)}</div></div>`;
+  // Supplier links
+  const sup1 = p.suppliers && p.suppliers[0];
+  const sup2 = p.suppliers && p.suppliers[1];
+  document.getElementById('td-sup-links').innerHTML = `
+    ${sup1 ? `<a class="td-sup-btn" href="${sup1.link}" target="_blank" rel="noopener">🔗 1688 линк</a>` : ''}
+    ${sup2 ? `<a class="td-sup-btn" href="${sup2.link}" target="_blank" rel="noopener">🔗 Taobao линк</a>` : ''}
+    <a class="td-sup-btn" href="https://www.facebook.com/ads/library" target="_blank" rel="noopener">📣 Facebook зар</a>`;
+
+  // ── 02 SUPPLIER
+  document.getElementById('rp-suppliers').innerHTML =
+    `<div class="rp-sup-grid">${p.suppliers.map(s => `
+      <div class="rp-sup">
+        <div class="rp-sup-name">${s.name}</div>
+        <div class="rp-sup-badge" style="color:${s.badgeColor}">${s.badge}</div>
+        ${s.rows.map(r => `<div class="rp-row"><span class="rp-k">${r[0]}</span><span class="rp-v ${r[2]||''}">${r[1]}</span></div>`).join('')}
+        <a class="rp-sup-link" href="${s.link}" target="_blank" rel="noopener">→ ${s.linkLabel}</a>
+      </div>`).join('')}
+    </div>`;
+  document.getElementById('rp-sup-note').innerHTML = p.supNote;
+
+  // ── 03 CALCULATOR
+  const sellRange = document.getElementById('calc-sell-range');
+  const qtyRange = document.getElementById('calc-qty-range');
+  sellRange.value = p.calcSell || 100000;
+  qtyRange.value = 30;
+  document.getElementById('calc-sell-inp').value  = p.calcSell || 100000;
+  document.getElementById('calc-qty-inp').value   = 30;
+  document.getElementById('calc-cost-inp').value  = p.calcCost || 0;
+  document.getElementById('calc-ship-inp').value  = p.calcShipping || 0;
+  document.getElementById('calc-other-inp').value = p.calcOther || 0;
+  document.getElementById('calc-ad-inp').value    = 0;
+  document.getElementById('calc-extras').innerHTML = `
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Бараа өртөг</div><div class="td-calc-ext-val">${fmtTug(p.calcCost||0)}</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Тээврийн зардал</div><div class="td-calc-ext-val">${fmtTug(p.calcShipping||0)}</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Бусад зардал</div><div class="td-calc-ext-val">${fmtTug(p.calcOther||0)}</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Ашгийн хувь</div><div class="td-calc-ext-val" id="calc-margin-pct">—</div></div>`;
+  updateCalc();
+
+  // ── 04 DEMAND CHART
+  renderDemandChart(p.demandData || [50,50,50,50,50,50,50,50,50,50,50,50]);
+  renderSatGauge(p.saturation || 20, p.satStores || 0);
+
+  // ── 05 SOCIAL TARGETING
+  const ta = p.targetAudience || {};
+  document.getElementById('td-target-ints').innerHTML = (ta.interests||[]).map(i =>
+    `<div class="td-target-int-row"><span class="td-target-int-name">${i.name}</span><span class="td-target-int-size">${i.size}</span></div>`
+  ).join('');
+  document.getElementById('td-target-gender').textContent = ta.gender || '—';
+  document.getElementById('td-target-age').textContent = ta.age || '—';
+  document.getElementById('td-target-total').textContent = ta.totalAudience || '—';
+
+  // ── 06 HOOKS
+  document.getElementById('rp-hooks').innerHTML = p.hooks.map(h =>
+    `<div class="rp-hook-card">
+      <div class="rp-hook-num">${h.num} · ${h.tag}</div>
+      <div class="rp-hook-ttl">${h.ttl}</div>
+      <div class="rp-hook-desc">${h.desc}</div>
+      <div class="rp-hook-text-wrap">
+        <div class="rp-hook-text">${h.text}</div>
+        <button class="rp-copy" onclick="copyHook(this,${JSON.stringify(h.text)})">Хуулах</button>
+      </div>
+    </div>`
+  ).join('');
+
+  // ── 07 COMPLEMENTS
+  document.getElementById('td-complements').innerHTML = (p.complements||[]).map(c =>
+    `<div class="td-comp-card">
+      <div class="td-comp-emoji">${c.emoji}</div>
+      <div class="td-comp-name">${c.name}</div>
+      <div class="td-comp-cost">${c.cost}</div>
+      <div class="td-comp-where">📦 ${c.where}</div>
+    </div>`
+  ).join('') || '<div style="color:var(--m);font-size:11px;grid-column:1/-1">—</div>';
+
+
+  // ── 08 INFLUENCERS (renumbered from 09)
+  renderInfluencers(p);
+
+  // ── 09 RISKS (renumbered from 10)
+  document.getElementById('rp-risks').innerHTML =
+    `<div class="rp-risk-grid">${p.risks.map(r => `
+      <div class="rp-risk ${r.g?'g':'r'}">
+        <div class="rp-risk-ico">${r.ico}</div>
+        <div class="rp-risk-ttl">${r.ttl}</div>
+        <div class="rp-risk-desc">${r.desc}</div>
+      </div>`).join('')}</div>`;
+
+  // ── 11 LAUNCH
+  const L = p.launch;
+  const budgetRows = L.budget.map(b => `
+    <div class="lp-brow">
+      <div class="lp-brow-ico">${b.ico}</div>
+      <div class="lp-brow-info"><div class="lp-brow-name">${b.name}</div><div class="lp-brow-note">${b.note}</div></div>
+      <div class="lp-brow-right">
+        <div class="lp-brow-cost ${b.type}">${b.cost}</div>
+        <div class="lp-brow-tag ${b.type}">${b.type==='must'?'Заавал':'Сонголттой'}</div>
+      </div>
+    </div>`).join('');
+  const stepsHtml = `<div class="lp-steps">${L.steps.map(s=>`
+    <div class="lp-step">
+      <div class="lp-step-left"><div class="lp-step-num">${s.n}</div><div class="lp-step-ico">${s.ico}</div><div class="lp-step-line"></div></div>
+      <div class="lp-step-body"><div class="lp-step-ttl">${s.ttl}</div><div class="lp-step-desc">${s.desc}</div></div>
+    </div>`).join('')}</div>`;
+  const chHtml = `<div class="lp-channels">${L.channels.map(c=>`
+    <div class="lp-ch"><div class="lp-ch-dot"></div>
+      <div class="lp-ch-body"><div class="lp-ch-name">${c.name}<span class="lp-ch-tag">${c.tag}</span></div><div class="lp-ch-desc">${c.desc}</div></div>
+    </div>`).join('')}</div>`;
+  const pkgHtml = L.packaging.needed
+    ? `<div class="lp-pkg-note">💡 ${L.packaging.note||''}</div>
+       <div class="lp-pkg-rows">${(L.packaging.items||[]).map(i=>`<div class="lp-pkg-row"><div class="lp-pkg-name">${i.name}</div><div class="lp-pkg-where">📍 ${i.where}</div><div class="lp-pkg-price">${i.price}</div></div>`).join('')}</div>`
+    : `<div class="lp-pkg-note">💡 ${L.packaging.note}</div>`;
+  const tlHtml = `<div class="lp-timeline">${L.timeline.map(t=>`<div class="lp-tl-item"><div class="lp-tl-week">${t.week}</div><div class="lp-tl-event">${t.event}</div></div>`).join('')}</div>`;
+  document.getElementById('rp-launch').innerHTML = `
+    <div class="lp-section"><div class="lp-section-lbl">Эхлэх зардлын тооцоо</div>
+      <div class="lp-budget-rows">${budgetRows}</div>
+      <div class="lp-budget-total">${L.budgetNote}</div>
+    </div>
+    <div class="lp-section"><div class="lp-section-lbl">Алхам алхмаар гарын авлага</div>${stepsHtml}</div>
+    <div class="lp-section"><div class="lp-section-lbl">Хаана зарах вэ</div>${chHtml}</div>
+    ${L.packaging.needed||L.packaging.note?`<div class="lp-section"><div class="lp-section-lbl">Савлагаа</div>${pkgHtml}</div>`:''}
+    <div class="lp-section"><div class="lp-section-lbl">Хугацааны төлөвлөгөө</div>${tlHtml}</div>`;
+
+  // ── CROSS-SELL
+  const csGradients = {auto:'linear-gradient(150deg,#050c18,#0a1428)',home:'linear-gradient(150deg,#0e0b06,#1a1106)',beauty:'linear-gradient(150deg,#110608,#1a0812)',health:'linear-gradient(150deg,#050e07,#081808)',kids:'linear-gradient(150deg,#09070f,#110918)'};
+  const others = PRODUCTS.filter(x=>x.id!==p.id).slice(0,2);
+  document.getElementById('rp-cs-grid').innerHTML = others.map(o=>{
+    const cg2=csGradients[o.cat]||{bg:'linear-gradient(150deg,#0d0d12,#13131a)'};
+    const ulk=isUnlocked(o.id);
+    return `<div class="rp-cs-card" onclick="closeReport();setTimeout(()=>openModal('${o.id}'),80)">
+      <div class="rp-cs-thumb" style="background:${cg2}">${o.emoji}</div>
+      <div style="flex:1;min-width:0"><div class="rp-cs-name">${o.name}</div>
+        <div class="rp-cs-meta"><span class="rp-cs-margin">${o.marginRange}</span><span class="rp-cs-price">${ulk?'✓ Нээгдсэн':'₮9,900'}</span></div>
+      </div><div class="rp-cs-arrow">→</div></div>`;
+  }).join('');
+
+  // Scroll to top, show
+  const scrollEl = document.getElementById('rp-scroll-area');
+  rv.style.display = 'block';
+  if (scrollEl) scrollEl.scrollTop = 0;
+  document.body.classList.add('locked');
+  // Update active nav
+  updateActiveAnchor('sec-overview');
+
+  // URL
+try { const _u=new URL(window.location); _u.searchParams.set('id',p.id); safeReplaceState(_u); } catch(e) {}
+
+  // Scroll spy
+  setupScrollSpy();
+}
+
+// ── Helper: format ₮
+function fmtTug(n) {
+  if (!n && n!==0) return '—';
+  return '₮' + Math.round(n).toLocaleString('mn-MN');
+}
+
+// ── Demand chart (SVG)
+function renderDemandChart(data) {
+  const svg = document.getElementById('td-demand-chart');
+  if (!svg) return;
+  const w=300, h=90, pad=4;
+  const max=Math.max(...data), min=Math.min(...data), range=(max-min)||1;
+  const pts = data.map((v,i) => {
+    const x = pad + (i/(data.length-1))*(w-pad*2);
+    const y = pad + (1-(v-min)/range)*(h-pad*2);
+    return [x,y];
+  });
+  // Smooth bezier path
+  let d = `M ${pts[0][0]} ${pts[0][1]}`;
+  for (let i=1;i<pts.length;i++) {
+    const cp1x = pts[i-1][0]+(pts[i][0]-pts[i-1][0])*0.4;
+    const cp2x = pts[i][0]-(pts[i][0]-pts[i-1][0])*0.4;
+    d += ` C ${cp1x} ${pts[i-1][1]}, ${cp2x} ${pts[i][1]}, ${pts[i][0]} ${pts[i][1]}`;
+  }
+  // Fill polygon
+  const fillPts = pts.map(p=>p[0]+','+p[1]).join(' ') + ` ${pts[pts.length-1][0]},${h} ${pts[0][0]},${h}`;
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="demandGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(200,255,0,0.25)"/>
+        <stop offset="100%" stop-color="rgba(200,255,0,0)"/>
+      </linearGradient>
+    </defs>
+    <polygon points="${fillPts}" fill="url(#demandGrad)"/>
+    <path d="${d}" fill="none" stroke="#c8ff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+
+// ── Saturation gauge (SVG semi-circle)
+function renderSatGauge(val, stores) {
+  const svg = document.getElementById('td-sat-gauge');
+  const descEl = document.getElementById('td-sat-desc');
+  const storesEl = document.getElementById('td-sat-stores');
+  if (!svg) return;
+  // Color based on saturation level
+  const color = val<25 ? '#c8ff00' : val<50 ? '#ff9632' : '#ff4444';
+  const label = val<25 ? 'Бага' : val<50 ? 'Дунд' : 'Өндөр';
+  descEl.textContent = label;
+  descEl.style.color = color;
+  storesEl.textContent = stores + ' дэлгүүр зарж байна';
+  // Draw semi-arc gauge: center (65,65), r=55
+  const cx=65, cy=65, r=50;
+  // background arc: 180 degrees
+  const bx1 = cx-r, by1 = cy, bx2 = cx+r, by2 = cy;
+  // filled arc angle proportional to val
+  const angle = (val/100)*180; // 0 to 180 degrees
+  const rad = (angle - 180) * Math.PI/180;
+  const ex = cx + r*Math.cos(rad);
+  const ey = cy + r*Math.sin(rad);
+  const largeArc = angle > 90 ? 1 : 0;
+  svg.innerHTML = `
+    <path d="M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${cx+r} ${cy}" fill="none" stroke="#1c1c26" stroke-width="10" stroke-linecap="round"/>
+    <path d="M ${cx-r} ${cy} A ${r} ${r} 0 ${largeArc} 1 ${ex} ${ey}" fill="none" stroke="${color}" stroke-width="10" stroke-linecap="round"/>
+    <text x="${cx}" y="${cy-8}" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="18" fill="${color}">${val}</text>
+    <text x="${cx}" y="${cy+6}" text-anchor="middle" font-family="DM Mono,monospace" font-size="8" fill="#5a5a72" letter-spacing="1">/ 100</text>`;
+}
+
+// ── Calculator: sync range ↔ number input
+function syncSellInput() {
+  const v = document.getElementById('calc-sell-range').value;
+  document.getElementById('calc-sell-inp').value = v;
+  updateCalc();
+}
+function syncSellRange() {
+  const v = parseInt(document.getElementById('calc-sell-inp').value)||0;
+  document.getElementById('calc-sell-range').value = Math.min(v, 2000000);
+  updateCalc();
+}
+function syncQtyInput() {
+  const v = document.getElementById('calc-qty-range').value;
+  document.getElementById('calc-qty-inp').value = v;
+  updateCalc();
+}
+function syncQtyRange() {
+  const v = parseInt(document.getElementById('calc-qty-inp').value)||1;
+  document.getElementById('calc-qty-range').value = Math.min(v, 1000);
+  updateCalc();
+}
+
+// ── Calculator update
+function updateCalc() {
+  if (!calcProductData) return;
+  const sell  = parseInt(document.getElementById('calc-sell-inp').value)||0;
+  const qty   = parseInt(document.getElementById('calc-qty-inp').value)||0;
+  const cost  = parseInt(document.getElementById('calc-cost-inp').value)||0;
+  const ship  = parseInt(document.getElementById('calc-ship-inp').value)||0;
+  const other = parseInt(document.getElementById('calc-other-inp').value)||0;
+  const ad    = parseInt(document.getElementById('calc-ad-inp').value)||0;
+  const net   = sell - cost - ship - other - ad;
+  const total = net * qty;
+  const pct   = sell > 0 ? Math.round((net/sell)*100) : 0;
+  const pcRatio = (cost+ship+other+ad) > 0 ? (sell/(cost+ship+other+ad)).toFixed(2)+'X' : '—';
+  document.getElementById('calc-net').textContent = fmtTug(net);
+  document.getElementById('calc-total').textContent = fmtTug(total);
+  document.getElementById('calc-extras').innerHTML = `
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Ашгийн хувь</div><div class="td-calc-ext-val" style="color:${pct>=40?'var(--a)':pct>=20?'var(--orange)':'var(--r)'}">${pct}%</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">P/C харьцаа</div><div class="td-calc-ext-val">${pcRatio}</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Нийт зардал</div><div class="td-calc-ext-val">${fmtTug(cost+ship+other+ad)}</div></div>
+    <div class="td-calc-ext"><div class="td-calc-ext-lbl">Break-even</div><div class="td-calc-ext-val">${net>0?Math.ceil((cost+ship+other+ad)/net)+' ш':'—'}</div></div>`;
+}
+
+function resetCalc() {
+  if (!calcProductData) return;
+  const p = calcProductData;
+  document.getElementById('calc-sell-inp').value   = p.calcSell||0;
+  document.getElementById('calc-sell-range').value = p.calcSell||100000;
+  document.getElementById('calc-qty-inp').value    = 30;
+  document.getElementById('calc-qty-range').value  = 30;
+  document.getElementById('calc-cost-inp').value   = p.calcCost||0;
+  document.getElementById('calc-ship-inp').value   = p.calcShipping||0;
+  document.getElementById('calc-other-inp').value  = p.calcOther||0;
+  document.getElementById('calc-ad-inp').value     = 0;
+  updateCalc();
+}
+
+// ── Scroll to section
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  const scrollArea = document.getElementById('rp-scroll-area');
+  if (el && scrollArea) {
+    scrollArea.scrollTo({top: el.offsetTop - 10, behavior:'smooth'});
+  }
+  updateActiveAnchor(id);
+}
+
+function updateActiveAnchor(id) {
+  document.querySelectorAll('.rp-anchor-btn').forEach(b => b.classList.remove('active'));
+  const secMap = {
+    'sec-overview':0,'sec-supplier':1,'sec-calc':2,'sec-demand':3,'sec-target':4,
+    'sec-hooks':5,'sec-complements':6,'sec-influencers':7,'sec-risks':8,'sec-launch':9
+  };
+  const idx = secMap[id];
+  if (idx !== undefined) {
+    const btns = document.querySelectorAll('.rp-anchor-btn');
+    if (btns[idx]) btns[idx].classList.add('active');
+  }
+}
+
+function setupScrollSpy() {
+  const scrollArea = document.getElementById('rp-scroll-area');
+  if (!scrollArea) return;
+  const sections = ['sec-overview','sec-supplier','sec-calc','sec-demand','sec-target','sec-hooks','sec-complements','sec-influencers','sec-risks','sec-launch'];
+  scrollArea.onscroll = function() {
+    let current = sections[0];
+    for (const sid of sections) {
+      const el = document.getElementById(sid);
+      if (el && el.offsetTop - 60 <= scrollArea.scrollTop) current = sid;
+    }
+    updateActiveAnchor(current);
+  };
+}
+
+// ── Influencer add/remove
+function renderInfluencers(p) {
+  const infs = p.influencers || [];
+  const container = document.getElementById('td-influencers');
+  if (!container) return;
+  if (infs.length === 0) {
+    container.innerHTML = `<div class="td-inf-empty" style="width:100%">Influencer нэмэгдээгүй байна. Доорх Link + товчоор нэм.</div>`;
+  } else {
+    container.innerHTML = infs.map((h, i) => {
+      const isUrl = h.startsWith('http');
+      const display = isUrl ? h.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'') : h;
+      const inner = isUrl
+        ? `<a href="${h}" target="_blank" rel="noopener" style="color:var(--a);text-decoration:none">${display}</a>`
+        : display;
+      return `<div class="td-inf-tag" style="position:relative;padding-right:28px">
+        ${inner}
+        <button onclick="removeInfluencer(${i})" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--m);cursor:pointer;font-size:13px;line-height:1;padding:0" title="Устгах">×</button>
+      </div>`;
+    }).join('');
+  }
+}
+
+function addInfluencer() {
+  if (!currentProduct) return;
+  const inp = document.getElementById('inf-inp');
+  const val = inp.value.trim();
+  if (!val) return;
+  if (!currentProduct.influencers) currentProduct.influencers = [];
+  currentProduct.influencers.push(val);
+  inp.value = '';
+  renderInfluencers(currentProduct);
+}
+
+function removeInfluencer(idx) {
+  if (!currentProduct || !currentProduct.influencers) return;
+  currentProduct.influencers.splice(idx, 1);
+  renderInfluencers(currentProduct);
+}
+
+function closeReport() {
+  document.getElementById('report-view').style.display = 'none';
+  document.body.classList.remove('locked');
+  currentProduct = null;
+try { const _u=new URL(window.location); _u.searchParams.delete('id'); safeReplaceState(_u); } catch(e) {}
+  renderCatalog(currentCat);
+}
+
+function copyHook(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Хуулагдлаа';
+    setTimeout(() => { btn.textContent = orig; }, 2000);
+  });
+}
+
+// ══════════════════════════════════════════
+// ⑩ UNLOCK
+// ══════════════════════════════════════════
+function tryUnlock() {
+  if (!currentProduct) return;
+  const name = document.getElementById('u-name').value;
+  const code = document.getElementById('u-code').value;
+  const msg = document.getElementById('u-msg');
+  const ni = document.getElementById('u-name');
+  const ci = document.getElementById('u-code');
+  ni.classList.remove('err','ok-inp'); ci.classList.remove('err','ok-inp');
+  msg.className = 'u-msg';
+  if (!name.trim()) { ni.classList.add('err'); msg.className='u-msg err'; msg.textContent='Нэрээ оруулна уу'; return; }
+  if (!code.trim()) { ci.classList.add('err'); msg.className='u-msg err'; msg.textContent='Кодоо оруулна уу'; return; }
+  const res = validateCode(code, name, currentProduct.id);
+  if (res.ok) {
+    ci.classList.add('ok-inp');
+    msg.className = 'u-msg ok'; msg.textContent = '✓ Амжилттай! Нээгдлээ.';
+    saveUnlock(currentProduct.id, code.trim().toUpperCase(), name.trim(), res.expiry);
+    // Flash success
+    const flash = document.getElementById('unlock-flash');
+    document.getElementById('uf-emoji-el').textContent = currentProduct.emoji;
+    document.getElementById('uf-title-el').textContent = '✓ ' + currentProduct.name + ' нээгдлээ';
+    flash.classList.add('show');
+    setTimeout(() => {
+      flash.classList.remove('show');
+      showReportView(currentProduct);
+      renderCatalog(currentCat);
+    }, 1300);
+  } else {
+    ni.classList.add('err'); ci.classList.add('err');
+    msg.className = 'u-msg err'; msg.textContent = '✕ ' + res.msg;
+  }
+}
+
+// ══════════════════════════════════════════
+// ⑪ MODAL CLOSE
+// ══════════════════════════════════════════
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.classList.remove('locked');
+  currentProduct = null;
+try { const _u=new URL(window.location); _u.searchParams.delete('id'); safeReplaceState(_u); } catch(e) {}
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Enter' && ['u-name','u-code'].includes(document.activeElement.id)) tryUnlock();
+});
+
+// ══════════════════════════════════════════
+// ⑫ PAYMENT MODAL
+// ══════════════════════════════════════════
+function openPayModal() {
+  document.getElementById('pay-modal').classList.add('open');
+}
+function closePayModal() {
+  document.getElementById('pay-modal').classList.remove('open');
+}
+function handlePayOverlay(e) {
+  if (e.target === document.getElementById('pay-modal')) closePayModal();
+}
+function copyAcc() {
+  navigator.clipboard.writeText(BANK).then(() => {
+    const b = document.querySelector('.copy-btn');
+    b.textContent = '✓'; b.style.color = 'var(--a)';
+    setTimeout(() => { b.textContent = 'Хуулах'; b.style.color = ''; }, 2000);
+  });
+}
+
+// ══════════════════════════════════════════
+// ⑬ URL PARAM AUTO-OPEN (?id=garage)
+// ══════════════════════════════════════════
+(function() {
+  const pid = safeGetParam('id');
+  if (pid && PRODUCTS.find(p => p.id === pid)) {
+    setTimeout(() => {
+      if (isUnlocked(pid)) {
+        currentProduct = PRODUCTS.find(p => p.id === pid);
+        showReportView(currentProduct);
+      } else {
+        openModal(pid);
+      }
+    }, 200);
+  }
+})();
+
+// ══════════════════════════════════════════
+// ⑭ TOAST — av: emoji (fallback), imgUrl: Cloudinary URL (сонголттой)
+// ══════════════════════════════════════════
+const toasts = [
+  {av:'👩', imgUrl:'', name:'Сарантуяа Б.',time:'4 мин өмнө'},
+  {av:'👨', imgUrl:'', name:'Батбаяр Д.',time:'11 мин өмнө'},
+  {av:'🧑', imgUrl:'', name:'Номин Г.',time:'24 мин өмнө'},
+  {av:'👨', imgUrl:'', name:'Эрдэнэбат Л.',time:'38 мин өмнө'},
+];
+let ti = 0;
+function showToast() {
+  const t = toasts[ti % toasts.length]; ti++;
+  const avEl = document.getElementById('t-av');
+  if (t.imgUrl) {
+    avEl.innerHTML = `<img src="${t.imgUrl}" alt="${t.name}"
+      style="width:28px;height:28px;border-radius:50%;object-fit:cover;display:block;"
+      onerror="this.parentElement.textContent='${t.av}'">`;
+  } else {
+    avEl.textContent = t.av;
+  }
+  document.getElementById('t-name').textContent = t.name;
+  document.getElementById('t-time').textContent = t.time;
+  const el = document.getElementById('toast');
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 3500);
+}
+setTimeout(() => { showToast(); setInterval(showToast, 14000); }, 6000);
+
+// ══════════════════════════════════════════
+// ⑮ INIT
+// ══════════════════════════════════════════
+renderCatalog('all');
+document.getElementById('f-count').textContent = PRODUCTS.length + ' бараа';
+</script>
+</body>
+</html>
